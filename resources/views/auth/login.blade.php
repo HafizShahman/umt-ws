@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
-    <title>KPJ Rating System - Login</title>
+    <title>UMT Weather Station Kenyir - Login</title>
     <link rel="icon" type="image/x-icon" href="https://www.kpjhealth.com.my/media/kpj-logo.png" />
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap" rel="stylesheet">
@@ -25,10 +25,9 @@
             <div class="form-form-wrap">
                 <div class="form-container">
                     <div class="form-content">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEZ52mSH4rbv350MGSXPMRRqlNCPDDnlcyxQ&s"
-                            alt="logo">
-                        <h1 class="">Log In to <a href="{{ route('mainpage') }}"><span class="brand-name">UMT
-                                    Weather Station Kenyir</span></a></h1>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Logo_Rasmi_UMT.png/1200px-Logo_Rasmi_UMT.png"
+                            alt="logo"height="auto" width="80%">
+                        <h1 class="">Log In to <span class="brand-name">UMT Weather Station Kenyir</span></h1>
                         <p class="signup-link">New Here? <a href="{{ URL::to('register') }}">Create an account</a></p>
                         <form class="text-left" method="POST" action="{{ route('login') }}">
                             @csrf
@@ -111,8 +110,8 @@
             </div>
         </div>
         <div class="form-image">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEZ52mSH4rbv350MGSXPMRRqlNCPDDnlcyxQ&s"
-                alt="logo" height="auto" width="50%" style="margin-left: 25%; margin-top: 20%;">
+            <img src="{{ asset('assets/assets/auth/weatherstation.png') }}" alt="logo" height="auto"
+                width="auto">
         </div>
     </div>
 

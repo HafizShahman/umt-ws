@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
-    <title>CORK Admin Template - Register Login Cover Page</title>
+    <title>UMT Weather Station Kenyir - Register</title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap" rel="stylesheet">
@@ -24,7 +24,8 @@
             <div class="form-form-wrap">
                 <div class="form-container">
                     <div class="form-content">
-
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Logo_Rasmi_UMT.png/1200px-Logo_Rasmi_UMT.png"
+                        alt="logo"height="auto" width="80%">
                         <h1 class="">Sign Up to <span class="brand-name">UMT
                             Weather Station Kenyir</span></h1>
                         <p class="signup-link">Already have an account? <a href="{{ URL::to('login') }}">Log in</a>
@@ -96,6 +97,24 @@
                                         <div class="alert alert-danger">Must be same with Password</div>
                                     @enderror
                                 </div>
+                                <div id="user_type-field" class="field-wrapper input mb-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg>
+                                    <label for="user_type" class="form-label ml-5">User Type</label>
+                                    <select name="user_type" id="user_type" class="form-select" class="@error('user_type') is-invalid @enderror">
+                                        <option value="" disabled selected>Select User Type</option>
+                                        <option value="Student">Student</option>
+                                        <option value="Researcher">Researcher</option>
+                                        <option value="Staff">Staff</option>
+                                    </select>
+                                        @error('user_type')
+                                            <div class="alert alert-danger">Please Select User Type</div>
+                                        @enderror
+                                </div>
                                 {{-- <div class="field-wrapper terms_condition">
                                     <div class="n-chk new-checkbox checkbox-outline-primary">
                                         <label class="new-control new-checkbox checkbox-outline-primary">
@@ -129,8 +148,7 @@
             </div>
         </div>
         <div class="form-image">
-            <img src="https://media.kpjhealth.com.my/media/hospital/hosp-5/setting/1635323584_e286416a5a8cdb9d8518.png"
-                alt="logo" height="auto" width="50%" style="margin-left: 25%; margin-top: 40%;">
+            <img src="{{ asset('assets/assets/auth/weatherstation.png') }}" alt="logo" height="auto" width="auto">
         </div>
     </div>
 

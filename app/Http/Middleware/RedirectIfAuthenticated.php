@@ -5,6 +5,8 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 use Symfony\Component\HttpFoundation\Response;
 
 class RedirectIfAuthenticated
@@ -20,14 +22,23 @@ class RedirectIfAuthenticated
 
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check() && Auth::user()->role_id == 1) {
+                $upd['last_login_at'] = Carbon::now();
+                DB::table('users')->where('id', Auth::user()->id)->update($upd);
                 return redirect()->route('superadmindashboard');
             } elseif (Auth::guard($guard)->check() && Auth::user()->role_id == 2) {
+                $upd['last_login_at'] = Carbon::now();
+                DB::table('users')->where('id', Auth::user()->id)->update($upd);
                 return redirect()->route('umtadmindashboard');
-            } elseif (Auth::guard($guard)->check() && Auth::user()->role_id == 3) {
-                return redirect()->route('dasboard');
+            } elseif (Auth::guard($guard)->check() && Auth::user()->role_id == [3, 4]) {
+                $upd['last_login_at'] = Carbon::now();
+                DB::table('users')->where('id', Auth::user()->id)->update($upd);
+                return redirect()->route('userdashboard');
+            } elseif (Auth::guard($guard)->check() && Auth::user()->role_id == null) {
+                return redirect()->route('pending_approve');
             } else {
                 return $next($request);
             }
         }
+        
     }
 }

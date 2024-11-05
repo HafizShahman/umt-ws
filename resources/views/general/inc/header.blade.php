@@ -1,7 +1,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=yes">
-        <title>KPJ Damansara Specialist Hospital</title>
+        <title>UMT Weather Station Kenyir</title>
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <link rel="icon" type="image/x-icon" href="https://www.kpjhealth.com.my/media/kpj-logo.png" />
         <link href="{{ asset('assets/assets/css/loader.css') }}" rel="stylesheet" type="text/css" />

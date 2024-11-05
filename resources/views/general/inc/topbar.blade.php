@@ -6,17 +6,18 @@
                     class="navbar-logo" alt="logo">
             </li>
             <li class="nav-item theme-text">
-                <p>KPJ Damansara Specialist Hospital</p>
+                <p>UMT Weather Station</p>
             </li>
         </ul>
 
         <ul class="list-unstyled menu-categories" id="topAccordion">
 
-            <li class="menu single-menu  {{ Request::routeIs('dashboard' || 'superadmindashboard') ? 'active' : '' }}">
+            <li
+                class="menu single-menu  {{ Request::routeIs('userdashboard' || 'superadmindashboard') ? 'active' : '' }}">
                 @if (Auth::user()->role_id == 1)
                     <a href="{{ route('superadmindashboard') }}">
                     @else
-                        <a href="{{ route('dashboard') }}">
+                        <a href="{{ route('umtadmindashboard') }}">
                 @endif
                 <div class="">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -29,9 +30,9 @@
                 </div>
                 </a>
             </li>
-            @if (Auth::user()->role_id == 2 || Auth::user()->role_id == 4)
-                <li class="menu single-menu  {{ Request::routeIs('feedbacktable') ? 'active' : '' }}">
-                    <a href="{{ route('feedbacktable') }}">
+            @if (Auth::user()->role_id == 3 || Auth::user()->role_id == 4)
+                <li class="menu single-menu  {{ Request::routeIs('userdashboard') ? 'active' : '' }}">
+                    <a href="{{ route('userdashboard') }}">
                         <div class="">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -40,7 +41,7 @@
                                 </path>
                                 <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
                             </svg>
-                            <span>Feedback</span>
+                            <span>Graph Table</span>
                         </div>
                     </a>
                 </li>

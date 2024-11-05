@@ -1,12 +1,15 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Auth\PendingReg;
+use App\Http\Controllers\Auth\RegisterController;
 use App\Models\Improvement;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TableController;
-use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\FeedbackController;
+use App\Http\Controllers\UmtAdmin\UmtAdminController;
 use Illuminate\Support\Facades\Redirect;
 
 
@@ -18,23 +21,38 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'superadmin', 'middleware' => ['superadmin'], 'auth:sanctum', 'verified'], function () {
     Route::get('dashboard', [AdminController::class, 'index'])->name('superadmindashboard');
+    Route::get('profile', [ProfileController::class, 'profile'])->name('profile');
+    Route::post('/update/personalinfo', [ProfileController::class, 'updatepersonalinfo'])->name('updatepersonalinfo');
+    Route::delete('usersdelete/{id}', [ProfileController::class, 'destroy'])->name('users.destroy');
 });
 Route::group(['prefix' => 'umtadmin', 'middleware' => ['umtadmin'], 'auth:sanctum', 'verified'], function () {
-    Route::get('dashboard', [AdminController::class, 'index'])->name('umtadmindashboard');
+    Route::get('dashboard', [UmtAdminController::class, 'index'])->name('umtadmindashboard');
+
+    Route::post('assign/{userid}/{role}', [UmtAdminController::class, 'assignrole'])->name('profile');
+
+    Route::get('profile', [ProfileController::class, 'profile'])->name('profile');
+    Route::post('/update/personalinfo', [ProfileController::class, 'updatepersonalinfo'])->name('updatepersonalinfo');
+    Route::delete('usersdelete/{id}', [ProfileController::class, 'destroy'])->name('users.destroy');
 });
 
 Route::group(['prefix' => 'user', 'middleware' => ['userone'], 'auth:sanctum', 'verified'], function () {
-    Route::get('dashboard', [AdminController::class, 'index'])->name('dashboard');
+    Route::get('dashboard', [AdminController::class, 'index'])->name('userdashboard');
+    Route::get('profile', [ProfileController::class, 'profile'])->name('profile');
+    Route::post('/update/personalinfo', [ProfileController::class, 'updatepersonalinfo'])->name('updatepersonalinfo');
+    Route::delete('usersdelete/{id}', [ProfileController::class, 'destroy'])->name('users.destroy');
 });
 
 Route::group(['prefix' => 'user', 'middleware' => ['usertwo'], 'auth:sanctum', 'verified'], function () {
-    Route::get('dashboard', [AdminController::class, 'index'])->name('dashboard');
+    Route::get('dashboard', [AdminController::class, 'index'])->name('userdashboard');
+    Route::get('profile', [ProfileController::class, 'profile'])->name('profile');
+    Route::post('/update/personalinfo', [ProfileController::class, 'updatepersonalinfo'])->name('updatepersonalinfo');
+    Route::delete('usersdelete/{id}', [ProfileController::class, 'destroy'])->name('users.destroy');
 });
 
+Route::get('pending_approve', [PendingReg::class, 'pendingreg'])->name('pending_approve');
 
-Route::get('profile', [ProfileController::class, 'profile'])->name('profile');
-Route::post('/update/personalinfo', [ProfileController::class, 'updatepersonalinfo'])->name('updatepersonalinfo');
-Route::delete('usersdelete/{id}', [ProfileController::class, 'destroy'])->name('users.destroy');
+
+
 
 Route::get('/logout', [LogoutController::class, 'logout'])->name('logouttt');
 Route::post('/registeruser', [ProfileController::class, 'registeruser'])->name('registeruser');

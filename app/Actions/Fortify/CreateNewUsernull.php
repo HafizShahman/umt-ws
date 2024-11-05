@@ -29,6 +29,8 @@ class CreateNewUser implements CreatesNewUsers
                     'password' => $this->passwordRules(),
                     'confirmed' => ['required', 'string', 'same:password'], 'Confirm password must be same with password',
                     'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['required', 'accepted'] : '', 'Please tick agree term and condition',
+            'user_type' => ['required'],
+
                 ]
         )->validate($messages);
 
@@ -36,6 +38,7 @@ class CreateNewUser implements CreatesNewUsers
             'name' => $input['name'],
             'email' => $input['email'],
             'password' => Hash::make($input['password']),
+            'user_type' => $input['user_type'],
         ]);
     }
 }

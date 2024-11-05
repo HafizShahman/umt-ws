@@ -11,9 +11,9 @@
             </svg></a>
 
         <div class="nav-logo align-self-center">
-            <a class="navbar-brand" href="{{ route('dashboard') }}"><img alt="logo"
-                    src="https://www.kpjhealth.com.my/media/kpj-logo.png"> <span
-                    class="navbar-brand-name">KPJ Damansara Specialist Hospital</span></a>
+            <a class="navbar-brand" href="#"><img alt="logo"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEZ52mSH4rbv350MGSXPMRRqlNCPDDnlcyxQ&s"> <span
+                    class="navbar-brand-name">UMT Weather Station</span></a>
         </div>
 
         <ul class="navbar-item flex-row mr-auto">
