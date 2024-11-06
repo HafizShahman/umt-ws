@@ -44,8 +44,20 @@
                                         <td>{{ $num++ }}</td>
                                         <td>{{ $row->name }}</td>
                                         <td>{{ $row->email }}</td>
-                                        <td>{{ $row->rolename }}</td>
-                                        <td>{{ $row->user_type }}</td>
+                                        <td>
+                                            @if ($row->role_id != null)
+                                                {{ $row->rolename }}
+                                            @else
+                                                <span class="badge badge-warning">Role Not Set</span>
+                                            @endif
+                                        </td>
+                                        <td>{{ $row->user_type }}
+                                            @if ($row->user_type != null)
+                                                {{ $row->user_type }}
+                                            @else
+                                                <span class="badge badge-warning">User Type Not Available</span>
+                                            @endif
+                                        </td>
                                         <td>{{ $row->last_login_at }}</td>
                                         <td>{{ $row->last_logout_at }}</td>
                                         <td>
@@ -60,14 +72,20 @@
 
                                             <div class="dropdown-menu fw-4">
                                                 <div class="dropdown-item">
-                                                    <a href="{{ url('umtadmin/assign/' . $row->id . '/3') }}">
-                                                        <span>Assign as User 1</span>
-                                                    </a>
+                                                    <form action="{{route('assignrole')}}" method="post">
+                                                        @csrf
+                                                        <input type="hidden" name="userid" value="{{$row->id}}">
+                                                        <input type="hidden" name="roleid" value="3">
+                                                        <button type="submit" class="btn">Assign as User 1</button>
+                                                    </form>
                                                 </div>
                                                 <div class="dropdown-item">
-                                                    <a href="{{ url('umtadmin/assign/' . $row->id . '/4') }}">
-                                                        <span>Assign as User 2</span>
-                                                    </a>
+                                                    <form action="{{route('assignrole')}}" method="post">
+                                                        @csrf
+                                                        <input type="hidden" name="userid" value="{{$row->id}}">
+                                                        <input type="hidden" name="roleid" value="4">
+                                                        <button type="submit" class="btn">Assign as User 2</button>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </td>
@@ -80,9 +98,11 @@
                 </div>
             </div>
         </div>
+        
         @include('general.inc.footer')
     </div>
     <!--  END CONTENT AREA  -->
+    @include('general.js.feed_js')
 @endsection
 
 @section('page-script')

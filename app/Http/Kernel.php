@@ -4,7 +4,8 @@ namespace App\Http;
 
 use App\Http\Middleware\SuperAdminMiddleware;
 use App\Http\Middleware\UmtAdminMiddleware;
-use App\Http\Middleware\StaffMiddleware;
+use App\Http\Middleware\Staff1Middleware;
+use App\Http\Middleware\Staff2Middleware;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -68,7 +69,8 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'superadmin' => SuperAdminMiddleware::class,
         'umtadmin' => UmtAdminMiddleware::class,
-        'user1' => StaffMiddleware::class,
+        'userone' => Staff1Middleware::class,
+        'usertwo' => Staff2Middleware::class,
 
     ];
 }

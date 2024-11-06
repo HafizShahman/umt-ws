@@ -3,16 +3,16 @@
         App.init();
     });
 </script>
-<script src="{{ asset('assets/assets/js/custom.js') }}"></script>
+<script src="<?php echo e(asset('assets/assets/js/custom.js')); ?>"></script>
 <!-- END GLOBAL MANDATORY SCRIPTS -->
 
 <!-- BEGIN PAGE LEVEL CUSTOM SCRIPTS -->
-<script src="{{ asset('assets/plugins/table/datatable/datatables.js') }}"></script>
+<script src="<?php echo e(asset('assets/plugins/table/datatable/datatables.js')); ?>"></script>
 <!-- NOTE TO Use Copy CSV Excel PDF Print Options You Must Include These Files  -->
-<script src="{{ asset('assets/plugins/table/datatable/button-ext/dataTables.buttons.min.js') }}"></script>
-<script src="{{ asset('assets/plugins/table/datatable/button-ext/jszip.min.js') }}"></script>
-<script src="{{ asset('assets/plugins/table/datatable/button-ext/buttons.html5.min.js') }}"></script>
-<script src="{{ asset('assets/plugins/table/datatable/button-ext/buttons.print.min.js') }}"></script>
+<script src="<?php echo e(asset('assets/plugins/table/datatable/button-ext/dataTables.buttons.min.js')); ?>"></script>
+<script src="<?php echo e(asset('assets/plugins/table/datatable/button-ext/jszip.min.js')); ?>"></script>
+<script src="<?php echo e(asset('assets/plugins/table/datatable/button-ext/buttons.html5.min.js')); ?>"></script>
+<script src="<?php echo e(asset('assets/plugins/table/datatable/button-ext/buttons.print.min.js')); ?>"></script>
 <script>
     $('#html5-extension').DataTable({
         "dom": "<'dt--top-section'<'row'<'col-sm-12 col-md-6 d-flex justify-content-md-start justify-content-center'B><'col-sm-12 col-md-6 d-flex justify-content-md-end justify-content-center mt-md-0 mt-3'f>>>" +
@@ -55,3 +55,4 @@
         "pageLength": 7
     });
 </script>
+<?php /**PATH C:\laragon\www\umt-ws\resources\views/general/js/feed_js.blade.php ENDPATH**/ ?>

@@ -56,7 +56,7 @@
             <!--  BEGIN CONTENT AREA  -->
             <div id="content" class="main-content">
                 <div class="layout-px-spacing">
-                    <div class="page-header">
+                    <div class="page-hea der">
                         <nav class="breadcrumb-one" aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="javascript:void(0);">Tables</a></li>

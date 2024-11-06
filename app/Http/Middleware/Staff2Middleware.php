@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 use Session;
 
-class StaffMiddleware
+class Staff2Middleware
 {
     /**
      * Handle an incoming request.

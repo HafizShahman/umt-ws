@@ -7943,3 +7943,509 @@ Did you mean one of these?
 #60 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\laragon\\\\www\\\\...')
 #61 {main}
 "} 
+[2024-11-06 03:34:36] local.ERROR: Missing required parameters for [Route: assignrole] [URI: umtadmin/assign/{userid}/{role}] [Missing parameters: userid, role]. {"view":{"view":"C:\\laragon\\www\\umt-ws\\resources\\views\\umtadmin\\dashboard.blade.php","data":{"errors":"<pre class=sf-dump id=sf-dump-1767903752 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\ViewErrorBag</span> {<a class=sf-dump-ref>#491</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">bags</span>: []
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1767903752\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","usertable":"<pre class=sf-dump id=sf-dump-1901198600 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\Collection</span> {<a class=sf-dump-ref>#1330</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">items</span>: <span class=sf-dump-note>array:6</span> [<samp data-depth=2 class=sf-dump-compact>
+    <span class=sf-dump-index>0</span> => {<a class=sf-dump-ref>#510</a><samp data-depth=3 class=sf-dump-compact>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">id</span>\": <span class=sf-dump-num>1</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">name</span>\": \"<span class=sf-dump-str title=\"11 characters\">Super Admin</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">user_type</span>\": \"<span class=sf-dump-str title=\"10 characters\">superadmin</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">role_id</span>\": <span class=sf-dump-num>1</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">email</span>\": \"<span class=sf-dump-str title=\"14 characters\">admin@umtw.com</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">email_verified_at</span>\": \"<span class=sf-dump-str title=\"19 characters\">2024-11-05 11:06:50</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">password</span>\": \"<span class=sf-dump-str title=\"60 characters\">$2y$10$7a/nQPk81d82sPztJ6Er7u/H..4DZE6v/ygeIJyIAvl33LhWkI75G</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">two_factor_secret</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">two_factor_recovery_codes</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">remember_token</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">profile_photo_path</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">last_login_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">last_logout_at</span>\": \"<span class=sf-dump-str title=\"19 characters\">2024-11-05 11:26:35</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">created_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">updated_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">rolename</span>\": \"<span class=sf-dump-str title=\"10 characters\">SuperAdmin</span>\"
+    </samp>}
+    <span class=sf-dump-index>1</span> => {<a class=sf-dump-ref>#1479</a><samp data-depth=3 class=sf-dump-compact>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">id</span>\": <span class=sf-dump-num>2</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">name</span>\": \"<span class=sf-dump-str title=\"9 characters\">Umt Admin</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">user_type</span>\": \"<span class=sf-dump-str title=\"8 characters\">umtadmin</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">role_id</span>\": <span class=sf-dump-num>2</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">email</span>\": \"<span class=sf-dump-str title=\"12 characters\">umt@umtw.com</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">email_verified_at</span>\": \"<span class=sf-dump-str title=\"19 characters\">2024-11-05 11:06:50</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">password</span>\": \"<span class=sf-dump-str title=\"60 characters\">$2y$10$fs9GLAtk9LQz7I04BOZuHOihRsc1OVKri2J5sq/kY/1Hbl2PN.5y6</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">two_factor_secret</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">two_factor_recovery_codes</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">remember_token</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">profile_photo_path</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">last_login_at</span>\": \"<span class=sf-dump-str title=\"19 characters\">2024-11-06 03:28:14</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">last_logout_at</span>\": \"<span class=sf-dump-str title=\"19 characters\">2024-11-06 01:06:36</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">created_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">updated_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">rolename</span>\": \"<span class=sf-dump-str title=\"9 characters\">UMT Admin</span>\"
+    </samp>}
+    <span class=sf-dump-index>2</span> => {<a class=sf-dump-ref>#1477</a><samp data-depth=3 class=sf-dump-compact>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">id</span>\": <span class=sf-dump-num>3</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">name</span>\": \"<span class=sf-dump-str title=\"5 characters\">User1</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">user_type</span>\": \"<span class=sf-dump-str title=\"10 characters\">Researcher</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">role_id</span>\": <span class=sf-dump-num>3</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">email</span>\": \"<span class=sf-dump-str title=\"15 characters\">staff1@umtw.com</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">email_verified_at</span>\": \"<span class=sf-dump-str title=\"19 characters\">2024-11-05 11:06:50</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">password</span>\": \"<span class=sf-dump-str title=\"60 characters\">$2y$10$YaZGwMBYqbsyDIst6QpbEeCaQCiFOt4Tf5KcvbjJNHXJs3y6DEKUm</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">two_factor_secret</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">two_factor_recovery_codes</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">remember_token</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">profile_photo_path</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">last_login_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">last_logout_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">created_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">updated_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">rolename</span>\": \"<span class=sf-dump-str title=\"6 characters\">User 1</span>\"
+    </samp>}
+    <span class=sf-dump-index>3</span> => {<a class=sf-dump-ref>#1478</a><samp data-depth=3 class=sf-dump-compact>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">id</span>\": <span class=sf-dump-num>4</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">name</span>\": \"<span class=sf-dump-str title=\"5 characters\">User2</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">user_type</span>\": \"<span class=sf-dump-str title=\"7 characters\">Student</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">role_id</span>\": <span class=sf-dump-num>4</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">email</span>\": \"<span class=sf-dump-str title=\"15 characters\">staff2@umtw.com</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">email_verified_at</span>\": \"<span class=sf-dump-str title=\"19 characters\">2024-11-05 11:06:50</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">password</span>\": \"<span class=sf-dump-str title=\"60 characters\">$2y$10$jfNWIWfiJFvdZ2lFN1fBheZSTX.XjtLGroP5INseyi0KLAsSEBkvK</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">two_factor_secret</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">two_factor_recovery_codes</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">remember_token</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">profile_photo_path</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">last_login_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">last_logout_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">created_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">updated_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">rolename</span>\": \"<span class=sf-dump-str title=\"6 characters\">User 2</span>\"
+    </samp>}
+    <span class=sf-dump-index>4</span> => {<a class=sf-dump-ref>#1481</a><samp data-depth=3 class=sf-dump-compact>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">id</span>\": <span class=sf-dump-num>6</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">name</span>\": \"<span class=sf-dump-str title=\"13 characters\">hadwan hilman</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">user_type</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">role_id</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">email</span>\": \"<span class=sf-dump-str title=\"23 characters\">vackaventador@gmail.com</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">email_verified_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">password</span>\": \"<span class=sf-dump-str title=\"60 characters\">$2y$10$R9zafzvEl2DBC84.g.ohkO1Oa80Nb4JuLQhyTkIKfvh/KunqPaaUq</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">two_factor_secret</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">two_factor_recovery_codes</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">remember_token</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">profile_photo_path</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">last_login_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">last_logout_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">created_at</span>\": \"<span class=sf-dump-str title=\"19 characters\">2024-11-06 01:10:34</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">updated_at</span>\": \"<span class=sf-dump-str title=\"19 characters\">2024-11-06 01:10:34</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">rolename</span>\": <span class=sf-dump-const>null</span>
+    </samp>}
+    <span class=sf-dump-index>5</span> => {<a class=sf-dump-ref>#1482</a><samp data-depth=3 class=sf-dump-compact>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">id</span>\": <span class=sf-dump-num>7</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">name</span>\": \"<span class=sf-dump-str title=\"5 characters\">hafiz</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">user_type</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">role_id</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">email</span>\": \"<span class=sf-dump-str title=\"23 characters\">hafizshahman1@gmail.com</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">email_verified_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">password</span>\": \"<span class=sf-dump-str title=\"60 characters\">$2y$10$0lFI1wwfNYeciq6D/D17M.avL1q6NGiK65Ql.Hd0RoapR/CR/dgqa</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">two_factor_secret</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">two_factor_recovery_codes</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">remember_token</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">profile_photo_path</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">last_login_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">last_logout_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">created_at</span>\": \"<span class=sf-dump-str title=\"19 characters\">2024-11-06 01:22:51</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">updated_at</span>\": \"<span class=sf-dump-str title=\"19 characters\">2024-11-06 01:22:51</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">rolename</span>\": <span class=sf-dump-const>null</span>
+    </samp>}
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>false</span>
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1901198600\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+"}},"userId":2,"exception":"[object] (Spatie\\LaravelIgnition\\Exceptions\\ViewException(code: 0): Missing required parameters for [Route: assignrole] [URI: umtadmin/assign/{userid}/{role}] [Missing parameters: userid, role]. at C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Exceptions\\UrlGenerationException.php:35)
+[stacktrace]
+#0 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteUrlGenerator.php(90): Illuminate\\Routing\\Exceptions\\UrlGenerationException::forMissingParameters(Object(Illuminate\\Routing\\Route), Array)
+#1 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php(492): Illuminate\\Routing\\RouteUrlGenerator->to(Object(Illuminate\\Routing\\Route), Array, true)
+#2 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php(464): Illuminate\\Routing\\UrlGenerator->toRoute(Object(Illuminate\\Routing\\Route), Array, true)
+#3 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(826): Illuminate\\Routing\\UrlGenerator->route('assignrole', Array, true)
+#4 C:\\laragon\\www\\umt-ws\\resources\\views\\umtadmin\\dashboard.blade.php(68): route('assignrole')
+#5 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(109): require('C:\\\\laragon\\\\www\\\\...')
+#6 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#7 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\laragon\\\\www\\\\...', Array)
+#8 C:\\laragon\\www\\umt-ws\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php(69): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\laragon\\\\www\\\\...', Array)
+#9 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(70): Livewire\\LivewireViewCompilerEngine->evaluatePath('C:\\\\laragon\\\\www\\\\...', Array)
+#10 C:\\laragon\\www\\umt-ws\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php(35): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\laragon\\\\www\\\\...', Array)
+#11 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(195): Livewire\\LivewireViewCompilerEngine->get('C:\\\\laragon\\\\www\\\\...', Array)
+#12 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(178): Illuminate\\View\\View->getContents()
+#13 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(147): Illuminate\\View\\View->renderContents()
+#14 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#15 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#16 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(906): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#17 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(875): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#18 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(797): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#19 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#20 C:\\laragon\\www\\umt-ws\\app\\Http\\Middleware\\UmtAdminMiddleware.php(23): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\UmtAdminMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\AuthenticateSession.php(59): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Session\\Middleware\\AuthenticateSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#32 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(797): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#39 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(776): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#40 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(740): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#41 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(729): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#42 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(190): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#43 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#44 C:\\laragon\\www\\umt-ws\\vendor\\livewire\\livewire\\src\\DisableBrowserCache.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Livewire\\DisableBrowserCache->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#52 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#53 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#54 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#55 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#56 C:\\laragon\\www\\umt-ws\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(38): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#57 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Fruitcake\\Cors\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#58 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#59 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#60 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#61 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(165): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#62 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(134): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#63 C:\\laragon\\www\\umt-ws\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#64 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\laragon\\\\www\\\\...')
+#65 {main}
+
+[previous exception] [object] (Illuminate\\Routing\\Exceptions\\UrlGenerationException(code: 0): Missing required parameters for [Route: assignrole] [URI: umtadmin/assign/{userid}/{role}] [Missing parameters: userid, role]. at C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Exceptions\\UrlGenerationException.php:35)
+[stacktrace]
+#0 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteUrlGenerator.php(90): Illuminate\\Routing\\Exceptions\\UrlGenerationException::forMissingParameters(Object(Illuminate\\Routing\\Route), Array)
+#1 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php(492): Illuminate\\Routing\\RouteUrlGenerator->to(Object(Illuminate\\Routing\\Route), Array, true)
+#2 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php(464): Illuminate\\Routing\\UrlGenerator->toRoute(Object(Illuminate\\Routing\\Route), Array, true)
+#3 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(826): Illuminate\\Routing\\UrlGenerator->route('assignrole', Array, true)
+#4 C:\\laragon\\www\\umt-ws\\storage\\framework\\views\\0e819be411c94af23d1c99a4cc6cff017000c764.php(68): route('assignrole')
+#5 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(109): require('C:\\\\laragon\\\\www\\\\...')
+#6 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#7 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\laragon\\\\www\\\\...', Array)
+#8 C:\\laragon\\www\\umt-ws\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php(69): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\laragon\\\\www\\\\...', Array)
+#9 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(70): Livewire\\LivewireViewCompilerEngine->evaluatePath('C:\\\\laragon\\\\www\\\\...', Array)
+#10 C:\\laragon\\www\\umt-ws\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php(35): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\laragon\\\\www\\\\...', Array)
+#11 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(195): Livewire\\LivewireViewCompilerEngine->get('C:\\\\laragon\\\\www\\\\...', Array)
+#12 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(178): Illuminate\\View\\View->getContents()
+#13 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(147): Illuminate\\View\\View->renderContents()
+#14 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#15 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#16 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(906): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#17 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(875): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#18 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(797): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#19 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#20 C:\\laragon\\www\\umt-ws\\app\\Http\\Middleware\\UmtAdminMiddleware.php(23): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\UmtAdminMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\AuthenticateSession.php(59): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Session\\Middleware\\AuthenticateSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#32 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(797): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#39 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(776): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#40 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(740): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#41 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(729): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#42 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(190): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#43 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#44 C:\\laragon\\www\\umt-ws\\vendor\\livewire\\livewire\\src\\DisableBrowserCache.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Livewire\\DisableBrowserCache->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#52 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#53 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#54 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#55 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#56 C:\\laragon\\www\\umt-ws\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(38): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#57 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Fruitcake\\Cors\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#58 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#59 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#60 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#61 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(165): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#62 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(134): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#63 C:\\laragon\\www\\umt-ws\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#64 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\laragon\\\\www\\\\...')
+#65 {main}
+"} 
+[2024-11-06 14:05:41] local.ERROR: Undefined property: stdClass::$roleid {"view":{"view":"C:\\laragon\\www\\umt-ws\\resources\\views\\umtadmin\\dashboard.blade.php","data":{"errors":"<pre class=sf-dump id=sf-dump-1260000724 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\ViewErrorBag</span> {<a class=sf-dump-ref>#491</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">bags</span>: []
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1260000724\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","usertable":"<pre class=sf-dump id=sf-dump-448239168 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\Collection</span> {<a class=sf-dump-ref>#1330</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">items</span>: <span class=sf-dump-note>array:6</span> [<samp data-depth=2 class=sf-dump-compact>
+    <span class=sf-dump-index>0</span> => {<a class=sf-dump-ref>#510</a><samp data-depth=3 class=sf-dump-compact>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">id</span>\": <span class=sf-dump-num>1</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">name</span>\": \"<span class=sf-dump-str title=\"11 characters\">Super Admin</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">user_type</span>\": \"<span class=sf-dump-str title=\"10 characters\">superadmin</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">role_id</span>\": <span class=sf-dump-num>1</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">email</span>\": \"<span class=sf-dump-str title=\"14 characters\">admin@umtw.com</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">email_verified_at</span>\": \"<span class=sf-dump-str title=\"19 characters\">2024-11-05 11:06:50</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">password</span>\": \"<span class=sf-dump-str title=\"60 characters\">$2y$10$7a/nQPk81d82sPztJ6Er7u/H..4DZE6v/ygeIJyIAvl33LhWkI75G</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">two_factor_secret</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">two_factor_recovery_codes</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">remember_token</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">profile_photo_path</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">last_login_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">last_logout_at</span>\": \"<span class=sf-dump-str title=\"19 characters\">2024-11-05 11:26:35</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">created_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">updated_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">rolename</span>\": \"<span class=sf-dump-str title=\"10 characters\">SuperAdmin</span>\"
+    </samp>}
+    <span class=sf-dump-index>1</span> => {<a class=sf-dump-ref>#1479</a><samp data-depth=3 class=sf-dump-compact>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">id</span>\": <span class=sf-dump-num>2</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">name</span>\": \"<span class=sf-dump-str title=\"9 characters\">Umt Admin</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">user_type</span>\": \"<span class=sf-dump-str title=\"8 characters\">umtadmin</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">role_id</span>\": <span class=sf-dump-num>2</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">email</span>\": \"<span class=sf-dump-str title=\"12 characters\">umt@umtw.com</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">email_verified_at</span>\": \"<span class=sf-dump-str title=\"19 characters\">2024-11-05 11:06:50</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">password</span>\": \"<span class=sf-dump-str title=\"60 characters\">$2y$10$fs9GLAtk9LQz7I04BOZuHOihRsc1OVKri2J5sq/kY/1Hbl2PN.5y6</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">two_factor_secret</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">two_factor_recovery_codes</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">remember_token</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">profile_photo_path</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">last_login_at</span>\": \"<span class=sf-dump-str title=\"19 characters\">2024-11-06 13:58:14</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">last_logout_at</span>\": \"<span class=sf-dump-str title=\"19 characters\">2024-11-06 01:06:36</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">created_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">updated_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">rolename</span>\": \"<span class=sf-dump-str title=\"9 characters\">UMT Admin</span>\"
+    </samp>}
+    <span class=sf-dump-index>2</span> => {<a class=sf-dump-ref>#1477</a><samp data-depth=3 class=sf-dump-compact>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">id</span>\": <span class=sf-dump-num>3</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">name</span>\": \"<span class=sf-dump-str title=\"5 characters\">User1</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">user_type</span>\": \"<span class=sf-dump-str title=\"10 characters\">Researcher</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">role_id</span>\": <span class=sf-dump-num>3</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">email</span>\": \"<span class=sf-dump-str title=\"15 characters\">staff1@umtw.com</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">email_verified_at</span>\": \"<span class=sf-dump-str title=\"19 characters\">2024-11-05 11:06:50</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">password</span>\": \"<span class=sf-dump-str title=\"60 characters\">$2y$10$YaZGwMBYqbsyDIst6QpbEeCaQCiFOt4Tf5KcvbjJNHXJs3y6DEKUm</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">two_factor_secret</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">two_factor_recovery_codes</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">remember_token</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">profile_photo_path</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">last_login_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">last_logout_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">created_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">updated_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">rolename</span>\": \"<span class=sf-dump-str title=\"6 characters\">User 1</span>\"
+    </samp>}
+    <span class=sf-dump-index>3</span> => {<a class=sf-dump-ref>#1478</a><samp data-depth=3 class=sf-dump-compact>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">id</span>\": <span class=sf-dump-num>4</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">name</span>\": \"<span class=sf-dump-str title=\"5 characters\">User2</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">user_type</span>\": \"<span class=sf-dump-str title=\"7 characters\">Student</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">role_id</span>\": <span class=sf-dump-num>4</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">email</span>\": \"<span class=sf-dump-str title=\"15 characters\">staff2@umtw.com</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">email_verified_at</span>\": \"<span class=sf-dump-str title=\"19 characters\">2024-11-05 11:06:50</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">password</span>\": \"<span class=sf-dump-str title=\"60 characters\">$2y$10$jfNWIWfiJFvdZ2lFN1fBheZSTX.XjtLGroP5INseyi0KLAsSEBkvK</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">two_factor_secret</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">two_factor_recovery_codes</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">remember_token</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">profile_photo_path</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">last_login_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">last_logout_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">created_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">updated_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">rolename</span>\": \"<span class=sf-dump-str title=\"6 characters\">User 2</span>\"
+    </samp>}
+    <span class=sf-dump-index>4</span> => {<a class=sf-dump-ref>#1481</a><samp data-depth=3 class=sf-dump-compact>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">id</span>\": <span class=sf-dump-num>6</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">name</span>\": \"<span class=sf-dump-str title=\"13 characters\">hadwan hilman</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">user_type</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">role_id</span>\": <span class=sf-dump-num>3</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">email</span>\": \"<span class=sf-dump-str title=\"23 characters\">vackaventador@gmail.com</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">email_verified_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">password</span>\": \"<span class=sf-dump-str title=\"60 characters\">$2y$10$R9zafzvEl2DBC84.g.ohkO1Oa80Nb4JuLQhyTkIKfvh/KunqPaaUq</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">two_factor_secret</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">two_factor_recovery_codes</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">remember_token</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">profile_photo_path</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">last_login_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">last_logout_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">created_at</span>\": \"<span class=sf-dump-str title=\"19 characters\">2024-11-06 01:10:34</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">updated_at</span>\": \"<span class=sf-dump-str title=\"19 characters\">2024-11-06 01:10:34</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">rolename</span>\": \"<span class=sf-dump-str title=\"6 characters\">User 1</span>\"
+    </samp>}
+    <span class=sf-dump-index>5</span> => {<a class=sf-dump-ref>#1482</a><samp data-depth=3 class=sf-dump-compact>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">id</span>\": <span class=sf-dump-num>7</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">name</span>\": \"<span class=sf-dump-str title=\"5 characters\">hafiz</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">user_type</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">role_id</span>\": <span class=sf-dump-num>4</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">email</span>\": \"<span class=sf-dump-str title=\"23 characters\">hafizshahman1@gmail.com</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">email_verified_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">password</span>\": \"<span class=sf-dump-str title=\"60 characters\">$2y$10$0lFI1wwfNYeciq6D/D17M.avL1q6NGiK65Ql.Hd0RoapR/CR/dgqa</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">two_factor_secret</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">two_factor_recovery_codes</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">remember_token</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">profile_photo_path</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">last_login_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">last_logout_at</span>\": <span class=sf-dump-const>null</span>
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">created_at</span>\": \"<span class=sf-dump-str title=\"19 characters\">2024-11-06 01:22:51</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">updated_at</span>\": \"<span class=sf-dump-str title=\"19 characters\">2024-11-06 01:22:51</span>\"
+      +\"<span class=sf-dump-public title=\"Runtime added dynamic property\">rolename</span>\": \"<span class=sf-dump-str title=\"6 characters\">User 2</span>\"
+    </samp>}
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>false</span>
+</samp>}
+</pre><script>Sfdump(\"sf-dump-448239168\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+"}},"userId":2,"exception":"[object] (Spatie\\LaravelIgnition\\Exceptions\\ViewException(code: 0): Undefined property: stdClass::$roleid at C:\\laragon\\www\\umt-ws\\resources\\views\\umtadmin\\dashboard.blade.php:48)
+[stacktrace]
+#0 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(270): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'Undefined prope...', 'C:\\\\laragon\\\\www\\\\...', 48)
+#1 C:\\laragon\\www\\umt-ws\\resources\\views\\umtadmin\\dashboard.blade.php(48): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'Undefined prope...', 'C:\\\\laragon\\\\www\\\\...', 48)
+#2 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(109): require('C:\\\\laragon\\\\www\\\\...')
+#3 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#4 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\laragon\\\\www\\\\...', Array)
+#5 C:\\laragon\\www\\umt-ws\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php(69): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\laragon\\\\www\\\\...', Array)
+#6 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(70): Livewire\\LivewireViewCompilerEngine->evaluatePath('C:\\\\laragon\\\\www\\\\...', Array)
+#7 C:\\laragon\\www\\umt-ws\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php(35): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\laragon\\\\www\\\\...', Array)
+#8 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(195): Livewire\\LivewireViewCompilerEngine->get('C:\\\\laragon\\\\www\\\\...', Array)
+#9 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(178): Illuminate\\View\\View->getContents()
+#10 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(147): Illuminate\\View\\View->renderContents()
+#11 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#12 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#13 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(906): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#14 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(875): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#15 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(797): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#16 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#17 C:\\laragon\\www\\umt-ws\\app\\Http\\Middleware\\UmtAdminMiddleware.php(23): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\UmtAdminMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#19 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#20 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\AuthenticateSession.php(59): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Session\\Middleware\\AuthenticateSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#29 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(797): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#36 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(776): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#37 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(740): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#38 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(729): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#39 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(190): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#40 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#41 C:\\laragon\\www\\umt-ws\\vendor\\livewire\\livewire\\src\\DisableBrowserCache.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Livewire\\DisableBrowserCache->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 C:\\laragon\\www\\umt-ws\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(38): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Fruitcake\\Cors\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#55 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#56 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#57 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#58 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(165): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#59 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(134): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#60 C:\\laragon\\www\\umt-ws\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#61 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\laragon\\\\www\\\\...')
+#62 {main}
+
+[previous exception] [object] (ErrorException(code: 0): Undefined property: stdClass::$roleid at C:\\laragon\\www\\umt-ws\\storage\\framework\\views\\0e819be411c94af23d1c99a4cc6cff017000c764.php:48)
+[stacktrace]
+#0 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(270): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'Undefined prope...', 'C:\\\\laragon\\\\www\\\\...', 48)
+#1 C:\\laragon\\www\\umt-ws\\storage\\framework\\views\\0e819be411c94af23d1c99a4cc6cff017000c764.php(48): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'Undefined prope...', 'C:\\\\laragon\\\\www\\\\...', 48)
+#2 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(109): require('C:\\\\laragon\\\\www\\\\...')
+#3 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#4 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\laragon\\\\www\\\\...', Array)
+#5 C:\\laragon\\www\\umt-ws\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php(69): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\laragon\\\\www\\\\...', Array)
+#6 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(70): Livewire\\LivewireViewCompilerEngine->evaluatePath('C:\\\\laragon\\\\www\\\\...', Array)
+#7 C:\\laragon\\www\\umt-ws\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php(35): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\laragon\\\\www\\\\...', Array)
+#8 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(195): Livewire\\LivewireViewCompilerEngine->get('C:\\\\laragon\\\\www\\\\...', Array)
+#9 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(178): Illuminate\\View\\View->getContents()
+#10 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(147): Illuminate\\View\\View->renderContents()
+#11 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#12 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#13 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(906): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#14 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(875): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#15 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(797): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#16 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#17 C:\\laragon\\www\\umt-ws\\app\\Http\\Middleware\\UmtAdminMiddleware.php(23): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\UmtAdminMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#19 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#20 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\AuthenticateSession.php(59): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Session\\Middleware\\AuthenticateSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#29 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(797): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#36 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(776): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#37 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(740): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#38 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(729): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#39 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(190): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#40 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#41 C:\\laragon\\www\\umt-ws\\vendor\\livewire\\livewire\\src\\DisableBrowserCache.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Livewire\\DisableBrowserCache->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 C:\\laragon\\www\\umt-ws\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(38): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Fruitcake\\Cors\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#55 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#56 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#57 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#58 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(165): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#59 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(134): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#60 C:\\laragon\\www\\umt-ws\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#61 C:\\laragon\\www\\umt-ws\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\laragon\\\\www\\\\...')
+#62 {main}
+"} 

@@ -44,8 +44,23 @@
                                         <td><?php echo e($num++); ?></td>
                                         <td><?php echo e($row->name); ?></td>
                                         <td><?php echo e($row->email); ?></td>
-                                        <td><?php echo e($row->rolename); ?></td>
-                                        <td><?php echo e($row->user_type); ?></td>
+                                        <td>
+                                            <?php if($row->role_id != null): ?>
+                                                <?php echo e($row->rolename); ?>
+
+                                            <?php else: ?>
+                                                <span class="badge badge-warning">Role Not Set</span>
+                                            <?php endif; ?>
+                                        </td>
+                                        <td><?php echo e($row->user_type); ?>
+
+                                            <?php if($row->user_type != null): ?>
+                                                <?php echo e($row->user_type); ?>
+
+                                            <?php else: ?>
+                                                <span class="badge badge-warning">User Type Not Available</span>
+                                            <?php endif; ?>
+                                        </td>
                                         <td><?php echo e($row->last_login_at); ?></td>
                                         <td><?php echo e($row->last_logout_at); ?></td>
                                         <td>
@@ -60,14 +75,20 @@
 
                                             <div class="dropdown-menu fw-4">
                                                 <div class="dropdown-item">
-                                                    <a href="<?php echo e(url('umtadmin/assign/' . $row->id . '/3')); ?>">
-                                                        <span>Assign as User 1</span>
-                                                    </a>
+                                                    <form action="<?php echo e(route('assignrole')); ?>" method="post">
+                                                        <?php echo csrf_field(); ?>
+                                                        <input type="hidden" name="userid" value="<?php echo e($row->id); ?>">
+                                                        <input type="hidden" name="roleid" value="3">
+                                                        <button type="submit" class="btn">Assign as User 1</button>
+                                                    </form>
                                                 </div>
                                                 <div class="dropdown-item">
-                                                    <a href="<?php echo e(url('umtadmin/assign/' . $row->id . '/4')); ?>">
-                                                        <span>Assign as User 2</span>
-                                                    </a>
+                                                    <form action="<?php echo e(route('assignrole')); ?>" method="post">
+                                                        <?php echo csrf_field(); ?>
+                                                        <input type="hidden" name="userid" value="<?php echo e($row->id); ?>">
+                                                        <input type="hidden" name="roleid" value="4">
+                                                        <button type="submit" class="btn">Assign as User 2</button>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </td>
@@ -80,9 +101,11 @@
                 </div>
             </div>
         </div>
+        
         <?php echo $__env->make('general.inc.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     </div>
     <!--  END CONTENT AREA  -->
+    <?php echo $__env->make('general.js.feed_js', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('page-script'); ?>

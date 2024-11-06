@@ -28,7 +28,7 @@ Route::group(['prefix' => 'superadmin', 'middleware' => ['superadmin'], 'auth:sa
 Route::group(['prefix' => 'umtadmin', 'middleware' => ['umtadmin'], 'auth:sanctum', 'verified'], function () {
     Route::get('dashboard', [UmtAdminController::class, 'index'])->name('umtadmindashboard');
 
-    Route::post('assign/{userid}/{role}', [UmtAdminController::class, 'assignrole'])->name('profile');
+    Route::post('assign', [UmtAdminController::class, 'assignrole'])->name('assignrole');
 
     Route::get('profile', [ProfileController::class, 'profile'])->name('profile');
     Route::post('/update/personalinfo', [ProfileController::class, 'updatepersonalinfo'])->name('updatepersonalinfo');
