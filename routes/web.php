@@ -47,5 +47,5 @@ Route::get('profile', [ProfileController::class, 'profile'])->name('profile');
 Route::post('/update/personalinfo', [ProfileController::class, 'updatepersonalinfo'])->name('updatepersonalinfo');
 Route::delete('usersdelete/{id}', [ProfileController::class, 'destroy'])->name('users.destroy');
 
-Route::get('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
+Route::get('/logout', [LogoutController::class, 'logout'])->name('logoutttt');
 Route::post('/registeruser', [ProfileController::class, 'registeruser'])->name('registeruser');
