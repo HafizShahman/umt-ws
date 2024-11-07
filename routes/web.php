@@ -19,23 +19,23 @@ Route::get('/', function () {
 })->name('mainpage');
 
 
-Route::group(['prefix' => 'superadmin', 'middleware' => ['superadmin']], function () {
+Route::group(['prefix' => 'superadmin', 'middleware' => ['superadmin', 'auth:sanctum', 'verified']], function () {
     Route::get('dashboard', [AdminController::class, 'index'])->name('superadmindashboard');
     Route::get('user_list', [AdminController::class, 'user_list'])->name('superadminuser_list');
     Route::get('mainboard', [AdminController::class, 'mainboard'])->name('superadminmainboard');
     Route::post('assign', [AdminController::class, 'adminassignrole'])->name('adminassignrole');
 });
-Route::group(['prefix' => 'umtadmin', 'middleware' => ['umtadmin']], function () {
+Route::group(['prefix' => 'umtadmin', 'middleware' => ['umtadmin', 'auth:sanctum', 'verified']], function () {
     Route::get('dashboard', [UmtAdminController::class, 'index'])->name('umtadmindashboard');
 
     Route::post('assign', [UmtAdminController::class, 'assignrole'])->name('assignrole');
 });
 
-Route::group(['prefix' => 'staff', 'middleware' => ['userone']], function () {
+Route::group(['prefix' => 'staff', 'middleware' => ['userone', 'auth:sanctum', 'verified']], function () {
     Route::get('dashboard', [AdminController::class, 'index'])->name('useronedashboard');
 });
 
-Route::group(['prefix' => 'user', 'middleware' => ['usertwo']], function () {
+Route::group(['prefix' => 'user', 'middleware' => ['usertwo', 'auth:sanctum', 'verified']], function () {
     Route::get('dashboard', [AdminController::class, 'index'])->name('usertwodashboard');
 });
 
