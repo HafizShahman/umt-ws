@@ -35,7 +35,7 @@ Route::group(['prefix' => 'umtadmin', 'middleware' => ['umtadmin'], 'auth:sanctu
     Route::delete('usersdelete/{id}', [ProfileController::class, 'destroy'])->name('users.destroy');
 });
 
-Route::group(['prefix' => 'user', 'middleware' => ['userone'], 'auth:sanctum', 'verified'], function () {
+Route::group(['prefix' => 'staff', 'middleware' => ['userone'], 'auth:sanctum', 'verified'], function () {
     Route::get('dashboard', [AdminController::class, 'index'])->name('userdashboard');
     Route::get('profile', [ProfileController::class, 'profile'])->name('profile');
     Route::post('/update/personalinfo', [ProfileController::class, 'updatepersonalinfo'])->name('updatepersonalinfo');
