@@ -124,6 +124,7 @@ class ProfileController extends Controller
         $user->name = $request->name;
         $user->email = $request->email;
         $user->password = bcrypt($request->password);
+        $user->user_type = $request->user_type;
         $user->save();
 
         return Redirect()->route('login');
