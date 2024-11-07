@@ -24,11 +24,6 @@ class AdminController extends Controller
         return view('admin.userlist', compact('usertable'));
     }
 
-    public function mainboard()
-    {    
-        return view('admin.mainboard');
-    }
-
     public function adminassignrole(Request $request)
     {
 
