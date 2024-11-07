@@ -7,7 +7,7 @@
     <div id="content" class="main-content">
         <div class="layout-px-spacing">
             <div class="page-header">
-                
+
             </div>
 
             <div class="row layout-top-spacing" id="cancel-row">
@@ -45,17 +45,14 @@
                                         <td><?php echo e($row->email); ?></td>
                                         <td>
                                             <?php if($row->role_id != null): ?>
-                                                <?php echo e($row->rolename); ?>
-
+                                                <span class="badge badge-success"><?php echo e($row->rolename); ?></span>
                                             <?php else: ?>
                                                 <span class="badge badge-warning">Role Not Set</span>
                                             <?php endif; ?>
                                         </td>
-                                        <td><?php echo e($row->user_type); ?>
-
+                                        <td>
                                             <?php if($row->user_type != null): ?>
-                                                <?php echo e($row->user_type); ?>
-
+                                                <span class="badge badge-success"><?php echo e($row->user_type); ?></span>
                                             <?php else: ?>
                                                 <span class="badge badge-warning">User Type Not Available</span>
                                             <?php endif; ?>
@@ -63,8 +60,7 @@
                                         <td><?php echo e($row->last_login_at); ?></td>
                                         <td><?php echo e($row->last_logout_at); ?></td>
                                         <td>
-                                            <a href="javascript:void(0);"
-                                                class="dropdown-toggle btn btn-light btn-sm"
+                                            <a href="javascript:void(0);" class="dropdown-toggle btn btn-light btn-sm"
                                                 id="user-profile-dropdown" data-toggle="dropdown" aria-haspopup="true"
                                                 aria-expanded="false">
                                                 <div class="media-body align-self-center">
@@ -100,7 +96,7 @@
                 </div>
             </div>
         </div>
-        
+
         <?php echo $__env->make('general.inc.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     </div>
     <!--  END CONTENT AREA  -->
