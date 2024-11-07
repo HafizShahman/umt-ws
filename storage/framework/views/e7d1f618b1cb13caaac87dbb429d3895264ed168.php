@@ -124,4 +124,4 @@
 </body>
 
 </html>
-<?php /**PATH C:\laragon\www\umt-ws\resources\views/auth/login.blade.php ENDPATH**/ ?>
+<?php /**PATH /var/www/html/umt-ws/resources/views/auth/login.blade.php ENDPATH**/ ?>
