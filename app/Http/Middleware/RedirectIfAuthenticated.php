@@ -24,15 +24,19 @@ class RedirectIfAuthenticated
             if (Auth::guard($guard)->check() && Auth::user()->role_id == 1) {
                 $upd['last_login_at'] = Carbon::now();
                 DB::table('users')->where('id', Auth::user()->id)->update($upd);
-                return redirect()->route('superadmindashboard');
+                return redirect()->route('superadminmainboard');
             } elseif (Auth::guard($guard)->check() && Auth::user()->role_id == 2) {
                 $upd['last_login_at'] = Carbon::now();
                 DB::table('users')->where('id', Auth::user()->id)->update($upd);
                 return redirect()->route('umtadmindashboard');
-            } elseif (Auth::guard($guard)->check() && Auth::user()->role_id == [3, 4]) {
+            } elseif (Auth::guard($guard)->check() && Auth::user()->role_id == 3) {
                 $upd['last_login_at'] = Carbon::now();
                 DB::table('users')->where('id', Auth::user()->id)->update($upd);
-                return redirect()->route('userdashboard');
+                return redirect()->route('useronedashboard');
+            } elseif (Auth::guard($guard)->check() && Auth::user()->role_id == 4) {
+                $upd['last_login_at'] = Carbon::now();
+                DB::table('users')->where('id', Auth::user()->id)->update($upd);
+                return redirect()->route('usertwodashboard');
             } elseif (Auth::guard($guard)->check() && Auth::user()->role_id == null) {
                 return redirect()->route('pending_approve');
             } else {
