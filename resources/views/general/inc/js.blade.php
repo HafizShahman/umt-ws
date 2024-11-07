@@ -10,23 +10,60 @@
     });
 </script>
 <script src="{{ asset('assets/assets/js/custom.js') }}"></script>
-<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+{{-- <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script> --}}
 
-<!-- BEGIN PAGE LEVEL CUSTOM SCRIPTS -->
-<script src="{{ asset('assets/plugins/table/datatable/datatables.js') }}"></script>
-<!-- NOTE TO Use Copy CSV Excel PDF Print Options You Must Include These Files  -->
-<script src="{{ asset('assets/plugins/table/datatable/button-ext/dataTables.buttons.min.js') }}"></script>
-<script src="{{ asset('assets/plugins/table/datatable/button-ext/jszip.min.js') }}"></script>
-<script src="{{ asset('assets/plugins/table/datatable/button-ext/buttons.html5.min.js') }}"></script>
-<script src="{{ asset('assets/plugins/table/datatable/button-ext/buttons.print.min.js') }}"></script>
 
-<script src="{{ asset('assets/plugins/dropify/dropify.min.js') }}"></script>
-<script src="{{ asset('assets/plugins/blockui/jquery.blockUI.min.js') }}"></script>
-<script src="{{ asset('assets/assets/js/users/account-settings.js') }}"></script>
-{{-- <script src="{{ asset('assets/plugins/tagInput/tags-input.js') }}"></script> --}}
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<!-- DataTables JS -->
+{{-- <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script> --}}
+
+<!-- DataTables Buttons JS -->
+<script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+<script src="https://cdn.datatables.net/buttons/3.1.2/js/dataTables.buttons.js"></script>
+<script src="https://cdn.datatables.net/buttons/3.1.2/js/buttons.dataTables.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/3.1.2/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/3.1.2/js/buttons.print.min.js"></script>
+
+
 
 <script>
-    $('#html5-extension').DataTable({
+    $(document).ready(function() {
+        $('#wstable').DataTable({
+            dom: 'Bfrtip',
+            // buttons: [
+            //     'copy', 'csv', 'excel', 'pdf', 'print'
+            // ],
+            buttons: [{
+                    extend: 'copy',
+                    className: 'btn btn-sm btn-light btn-rounded'
+                },
+                {
+                    extend: 'csv',
+                    className: 'btn btn-sm btn-rounded'
+                },
+                {
+                    extend: 'excel',
+                    className: 'btn btn-sm btn-rounded'
+                },
+                {
+                    extend: 'pdf',
+                    className: 'btn btn-sm btn-rounded'
+                },
+                {
+                    extend: 'print',
+                    className: 'btn btn-sm btn-rounded'
+                }
+            ],
+            scrollX: true
+        });
+    });
+</script>
+
+{{-- <script>
+    $('#wstable').DataTable({
         "dom": "<'dt--top-section'<'row'<'col-sm-12 col-md-6 d-flex justify-content-md-start justify-content-center'B><'col-sm-12 col-md-6 d-flex justify-content-md-end justify-content-center mt-md-0 mt-3'f>>>" +
             "<'table-responsive'tr>" +
             "<'dt--bottom-section d-sm-flex justify-content-sm-between text-center'<'dt--pages-count  mb-sm-0 mb-3'i><'dt--pagination'p>>",
@@ -63,7 +100,8 @@
             [0, "asc"]
         ]
         "stripeClasses": [],
+        scrollX: true,
         "lengthMenu": [7, 10, 20, 50],
         "pageLength": 7
     });
-</script>
+</script> --}}

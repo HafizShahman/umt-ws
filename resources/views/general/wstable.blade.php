@@ -56,66 +56,66 @@
             <!--  BEGIN CONTENT AREA  -->
             <div id="content" class="main-content">
                 <div class="layout-px-spacing">
-                    <div class="page-hea der">
-                        <nav class="breadcrumb-one" aria-label="breadcrumb">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="javascript:void(0);">Tables</a></li>
-                                <li class="breadcrumb-item active" aria-current="page"><a
-                                        href="javascript:void(0);">WS Table</a></li>
-                            </ol>
-                        </nav>
-                    </div>
-
-                    <div class="row layout-top-spacing" id="cancel-row">
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12  layout-spacing">
-                            <div class="widget-content widget-content-area br-6" id="monthtbl">
-                                <table id="html5-extension" class="table table-hover non-hover" style="width:100%">
+                    <div class="layout-top-spacing mt-9">
+                        <div class="layout-spacing">
+                            <div class="widget-content widget-content-area br-6">
+                                <table id="wstable" class="display nowrap mdl-data-table" style="width:100%">
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>Date</th>
-                                            <th>Name - MRN</th>
-                                            <th>Status</th>
-                                            <th>Rate</th>
-                                            <th>Satisfaction</th>
-                                            <th>Recommending</th>
-                                            <th>Comments</th>
-                                            {{-- <th class="dt-no-sorting">Actions</th> --}}
+                                            <th>ID</th>
+                                            <th>Timestamp</th>
+                                            <th>Latitude</th>
+                                            <th>Longitude</th>
+                                            {{-- <th>Accumulative Rainfall</th> --}}
+                                            <th>Barometric Pressure</th>
+                                            <th>Relative Humidity</th>
+                                            <th>Solar Radiation</th>
+                                            <th>Station Voltage</th>
+                                            <th>Bouy Voltage</th>
+                                            <th>Turbidity</th>
+                                            <th>Water Level</th>
+                                            <th>Water Temp</th>
+                                            <th>Wind Direction</th>
+                                            <th>Wind Speed</th>
+                                            <th>Chlorophyll</th>
+                                            <th>Conductivity</th>
+                                            <th>Dissolved Oxygen</th>
+                                            <th>Dissolved Oxygen Saturation</th>
+                                            <th>PH</th>
+                                            <th>Air Temp</th>
+                                            <th>Rainfall</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @php
                                             $num = 1;
                                         @endphp
-                                        @foreach ($userfeedback as $row)
+                                        @foreach ($table as $row)
                                             <tr>
                                                 <td>{{ $num++ }}</td>
-                                                <td>{{ Carbon\Carbon::parse($row->created_at)->format('d-M-Y') }}
-                                                <td>{{ $row->name . ' - ' . $row->mrn }}</td>
-                                                <td>
-                                                    @if (isset($row->mrn))
-                                                        @php
-                                                            $count = DB::table('feedback')
-                                                                ->select('mrn')
-                                                                ->where('mrn', $row->mrn)
-                                                                ->count();
-                                                            // dd($count);
-                                                        @endphp
-                                                        @if ($count > 1)
-                                                            <span class="badge badge-success">Follow up
-                                                                Patient</span>
-                                                        @else
-                                                            <span class="badge badge-warning">New Patient</span>
-                                                        @endif
-                                                    @else
-                                                        <span class="badge badge-danger">New Patient</span>
-                                                    @endif
-
-                                                </td>
-                                                <td>{{ $row->star }}</td>
-                                                <td>{{ $row->improve }}</td>
-                                                <td>{{ $row->recommend }}</td>
-                                                <td>{{ $row->feedback }}</td>
+                                                <td>{{ $row->id }}</td>
+                                                <td>{{ Carbon\Carbon::parse($row->timestamp)->format('d-M-Y h-i-s a') }}
+                                                <td>{{ $row->latitude }}</td>
+                                                <td>{{ $row->longitude }}</td>
+                                                {{-- <td>{{ $row->hour_rainfall }}</td> --}}
+                                                <td>{{ $row->baro_press }}</td>
+                                                <td>{{ $row->rel_hum }}</td>
+                                                <td>{{ $row->sol_rad }}</td>
+                                                <td>{{ $row->L_Voltage }}</td>
+                                                <td>{{ $row->B_Voltage }}</td>
+                                                <td>{{ $row->turbidity }}</td>
+                                                <td>{{ $row->WATER_lvl }}</td>
+                                                <td>{{ $row->w_temp }}</td>
+                                                <td>{{ $row->wind_direction }}</td>
+                                                <td>{{ $row->wind_speed }}</td>
+                                                <td>{{ $row->chlorophyll }}</td>
+                                                <td>{{ $row->conductivity }}</td>
+                                                <td>{{ $row->DO }}</td>
+                                                <td>{{ $row->DO_sat }}</td>
+                                                <td>{{ $row->ph }}</td>
+                                                <td>{{ $row->air_temp }}</td>
+                                                <td>{{ $row->rain }}</td>
                                             </tr>
                                         @endforeach
                                     </tbody>
@@ -123,7 +123,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
                 @include('general.inc.footer')
             </div>
@@ -132,5 +131,4 @@
     </div>
     <!--  END CONTENT AREA  -->
     @include('general.inc.js')
-    @include('general.js.feed_js')
 @endsection

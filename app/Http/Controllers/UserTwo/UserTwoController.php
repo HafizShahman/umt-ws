@@ -20,7 +20,7 @@ class UserTwoController extends Controller
     public function table()
     {
         $table = DB::table('wskenyir_table')->limit(10)->get();
-        dd($table);
-        return view('general.wstable');
+        // dd($table);
+        return view('general.wstable',compact('table'));
     }
 }
