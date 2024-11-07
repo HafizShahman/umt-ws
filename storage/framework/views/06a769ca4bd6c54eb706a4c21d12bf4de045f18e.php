@@ -13,9 +13,9 @@
         <ul class="list-unstyled menu-categories" id="topAccordion">
 
             <li
-                class="menu single-menu  <?php echo e(Request::routeIs('userdashboard' || 'superadminmainboard') ? 'active' : ''); ?>">
+                class="menu single-menu  <?php echo e(Request::routeIs('userdashboard' || 'superadmindashboard') ? 'active' : ''); ?>">
                 <?php if(Auth::user()->role_id == 1): ?>
-                    <a href="<?php echo e(route('superadminmainboard')); ?>">
+                    <a href="<?php echo e(route('superadmindashboard')); ?>">
                     <?php else: ?>
                         <a href="<?php echo e(route('umtadmindashboard')); ?>">
                 <?php endif; ?>
@@ -46,25 +46,32 @@
                     </a>
                 </li>
             <?php endif; ?>
-            <?php if(Auth::user()->role_id == 1): ?>
-                <li class="menu single-menu  <?php echo e(Request::routeIs('superadminuser_list') ? 'active' : ''); ?>">
-                    <a href="<?php echo e(route('superadminuser_list')); ?>">
-                        <div class="">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="feather feather-clipboard">
-                                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2">
-                                </path>
-                                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
-                            </svg>
-                            <span>User List</span>
-                        </div>
-                    </a>
-                </li>
-            <?php endif; ?>
 
             
-            
+            <li class="menu single-menu <?php echo e(Request::routeIs('profile') ? 'active' : ''); ?> ">
+                <a href="#tables" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
+                    <div class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" class="feather feather-layout">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="3" y1="9" x2="21" y2="9"></line>
+                            <line x1="9" y1="21" x2="9" y2="9"></line>
+                        </svg>
+                        <span>Tables</span>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-chevron-down">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="tables" data-parent="#topAccordion">
+                    <li class=" <?php echo e(Request::routeIs('profile') ? 'active' : ''); ?>">
+                        <a href="<?php echo e(route('profile')); ?>"> Update Table Form </a>
+                    </li>
+                </ul>
+            </li>
 
         </ul>
     </nav>
