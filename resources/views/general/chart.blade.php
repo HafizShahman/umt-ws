@@ -6,12 +6,10 @@
 @section('content')
     <!--  BEGIN CONTENT AREA  -->
     <div id="content" class="main-content">
-        <div class="layout-px-spacing">
-            <iframe
-                src="http://wsumtkenyir.net:8080/dashboard/1d89a6a0-93ec-11ef-bec9-c7a144088036?publicId=cef145a0-8ff6-11ef-bec9-c7a144088036"
-                frameborder="0"></iframe>
-        </div>
-
+        <iframe height="1080px" width="100%" class="positon-absolute"
+            src="http://wsumtkenyir.net:8080/dashboard/1d89a6a0-93ec-11ef-bec9-c7a144088036?publicId=cef145a0-8ff6-11ef-bec9-c7a144088036"
+            frameborder="0" allowfullscreen>
+        </iframe>
         @include('general.inc.footer')
     </div>
     <!--  END CONTENT AREA  -->

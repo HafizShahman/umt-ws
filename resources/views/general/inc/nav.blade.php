@@ -12,8 +12,8 @@
 
         <div class="nav-logo align-self-center">
             <a class="navbar-brand" href="#"><img alt="logo"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEZ52mSH4rbv350MGSXPMRRqlNCPDDnlcyxQ&s"> <span
-                    class="navbar-brand-name">UMT Weather Station</span></a>
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEZ52mSH4rbv350MGSXPMRRqlNCPDDnlcyxQ&s">
+                <span class="navbar-brand-name">UMT Weather Station</span></a>
         </div>
 
         <ul class="navbar-item flex-row mr-auto">
@@ -23,6 +23,30 @@
         </ul>
 
         <ul class="navbar-item flex-row nav-dropdowns">
+            @if (Auth::user()->role_id == 1)
+                <li class="nav-item user-profile-dropdown order-lg-0 order-1">
+                    <a href="{{ route('superadminuser_list') }}" class="nav-link dropdown-toggle user" id="user-profile-dropdown">
+                    <div class="media">
+                        <div class="media-body align-self-center">
+                            <h6>User List</h6>
+                            {{-- <p>Manager</p> --}}
+                        </div>
+                    </div>
+                </a>
+                </li>
+            @endif
+            @if (Auth::user()->role_id == 2)
+                <li class="nav-item user-profile-dropdown order-lg-0 order-1">
+                    <a href="{{ route('umtadminuser_list') }}" class="nav-link dropdown-toggle user" id="user-profile-dropdown">
+                    <div class="media">
+                        <div class="media-body align-self-center">
+                            <h6>User List</h6>
+                            {{-- <p>Manager</p> --}}
+                        </div>
+                    </div>
+                </a>
+                </li>
+            @endif
             <li class="nav-item dropdown user-profile-dropdown order-lg-0 order-1">
                 <a href="javascript:void(0);" class="nav-link dropdown-toggle user" id="user-profile-dropdown"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -40,8 +64,7 @@
                         @if (isset($user->profile_photo_path))
                             <img src="{{ asset($user->profile_photo_path) }}" class="img-fluid" alt="admin-profile">
                         @else
-                            <img src="{{ asset('assets/assets/img/90x90.jpg') }}" class="img-fluid"
-                                alt="admin-profile">
+                            <img src="{{ asset('assets/assets/img/90x90.jpg') }}" class="img-fluid" alt="admin-profile">
                         @endif
                         {{-- <span class="badge badge-success"></span> --}}
                     </div>

@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Redirect;
 
 class UmtAdminController extends Controller
 {
-    public function index()
+    public function user_list()
     {
         $usertable = DB::table('users')
             ->leftJoin('roles', 'roles.id', '=', 'users.role_id')

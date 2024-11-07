@@ -9,6 +9,6 @@ class GeneralController extends Controller
 {
     public function mainboard()
     {    
-        return view('mainboard');
+        return view('general.mainboard');
     }
 }

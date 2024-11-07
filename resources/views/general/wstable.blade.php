@@ -61,11 +61,10 @@
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="javascript:void(0);">Tables</a></li>
                                 <li class="breadcrumb-item active" aria-current="page"><a
-                                        href="javascript:void(0);">Feedback Table</a></li>
+                                        href="javascript:void(0);">WS Table</a></li>
                             </ol>
                         </nav>
                     </div>
-                    <p id="demo"></p>
 
                     <div class="row layout-top-spacing" id="cancel-row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12  layout-spacing">

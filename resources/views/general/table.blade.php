@@ -166,7 +166,7 @@
                                 @php
                                     $num = 1;
                                 @endphp
-                                @foreach ($improvetrash as $row)
+                                @foreach ($table as $row)
                                     <tr>
                                         <td>{{ $num++ }}</td>
                                         <td>{{ $row->improvement }}</td>
