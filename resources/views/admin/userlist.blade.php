@@ -8,7 +8,7 @@
     <div id="content" class="main-content">
         <div class="layout-px-spacing">
             <div class="page-header">
-                
+
             </div>
 
             <div class="row layout-top-spacing" id="cancel-row">
@@ -46,14 +46,14 @@
                                         <td>{{ $row->email }}</td>
                                         <td>
                                             @if ($row->role_id != null)
-                                                {{ $row->rolename }}
+                                                <span class="badge badge-success">{{ $row->rolename }}</span>
                                             @else
                                                 <span class="badge badge-warning">Role Not Set</span>
                                             @endif
                                         </td>
-                                        <td>{{ $row->user_type }}
+                                        <td>
                                             @if ($row->user_type != null)
-                                                {{ $row->user_type }}
+                                                <span class="badge badge-success">{{ $row->user_type }}</span>
                                             @else
                                                 <span class="badge badge-warning">User Type Not Available</span>
                                             @endif
@@ -61,8 +61,7 @@
                                         <td>{{ $row->last_login_at }}</td>
                                         <td>{{ $row->last_logout_at }}</td>
                                         <td>
-                                            <a href="javascript:void(0);"
-                                                class="dropdown-toggle btn btn-light btn-sm"
+                                            <a href="javascript:void(0);" class="dropdown-toggle btn btn-light btn-sm"
                                                 id="user-profile-dropdown" data-toggle="dropdown" aria-haspopup="true"
                                                 aria-expanded="false">
                                                 <div class="media-body align-self-center">
@@ -72,17 +71,17 @@
 
                                             <div class="dropdown-menu fw-4">
                                                 <div class="dropdown-item">
-                                                    <form action="{{route('adminassignrole')}}" method="post">
+                                                    <form action="{{ route('adminassignrole') }}" method="post">
                                                         @csrf
-                                                        <input type="hidden" name="userid" value="{{$row->id}}">
+                                                        <input type="hidden" name="userid" value="{{ $row->id }}">
                                                         <input type="hidden" name="roleid" value="3">
                                                         <button type="submit" class="btn">Assign as User 1</button>
                                                     </form>
                                                 </div>
                                                 <div class="dropdown-item">
-                                                    <form action="{{route('adminassignrole')}}" method="post">
+                                                    <form action="{{ route('adminassignrole') }}" method="post">
                                                         @csrf
-                                                        <input type="hidden" name="userid" value="{{$row->id}}">
+                                                        <input type="hidden" name="userid" value="{{ $row->id }}">
                                                         <input type="hidden" name="roleid" value="4">
                                                         <button type="submit" class="btn">Assign as User 2</button>
                                                     </form>
@@ -98,7 +97,7 @@
                 </div>
             </div>
         </div>
-        
+
         @include('general.inc.footer')
     </div>
     <!--  END CONTENT AREA  -->
