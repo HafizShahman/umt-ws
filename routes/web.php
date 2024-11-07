@@ -25,6 +25,7 @@ Route::group(['prefix' => 'superadmin', 'middleware' => ['superadmin', 'auth:san
     Route::get('dashboard', [AdminController::class, 'index'])->name('superadmindashboard');
     Route::get('user_list', [AdminController::class, 'user_list'])->name('superadminuser_list');
     Route::get('mainboard', [GeneralController::class, 'mainboard'])->name('superadminmainboard');
+    
     Route::post('assign', [AdminController::class, 'adminassignrole'])->name('adminassignrole');
 });
 Route::group(['prefix' => 'umtadmin', 'middleware' => ['umtadmin', 'auth:sanctum', 'verified']], function () {
