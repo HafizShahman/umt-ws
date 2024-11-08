@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\UserTwo;
 
+use App\Exports\ExportTableData;
 use App\Http\Controllers\Controller;
 use App\Models\WskenyirTable;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Maatwebsite\Excel\Facades\Excel;
 
 class UserTwoController extends Controller
 {
@@ -19,15 +21,13 @@ class UserTwoController extends Controller
     }
     public function table(Request $request)
     {
-        
-        // dd($table);
-        if ($request->ajax()) {
+        $query = $request->input('search');
+        $table = WskenyirTable::paginate(20);
 
-            $table = WskenyirTable::all();
-
-            return datatables()->of($table)->make(true);
-
-        }
-        return view('general.wstable');
+        return view('general.wstable', compact('table', 'query'));
+    }
+    public function export()
+    {
+        return Excel::download(new ExportTableData, 'data.xlsx');
     }
 }

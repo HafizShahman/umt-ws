@@ -27,7 +27,7 @@ Route::group(['prefix' => 'superadmin', 'middleware' => ['superadmin', 'auth:san
     Route::get('dashboard', [AdminController::class, 'index'])->name('superadmindashboard');
     Route::get('user_list', [AdminController::class, 'user_list'])->name('superadminuser_list');
     Route::get('mainboard', [GeneralController::class, 'mainboard'])->name('superadminmainboard');
-    
+
     Route::post('assign', [AdminController::class, 'adminassignrole'])->name('adminassignrole');
 });
 Route::group(['prefix' => 'umtadmin', 'middleware' => ['umtadmin', 'auth:sanctum', 'verified']], function () {
@@ -39,14 +39,14 @@ Route::group(['prefix' => 'umtadmin', 'middleware' => ['umtadmin', 'auth:sanctum
 Route::group(['prefix' => 'staff', 'middleware' => ['userone', 'auth:sanctum']], function () {
     Route::get('dashboard', [UserOneController::class, 'mainboard'])->name('user1dashboard');
     Route::get('chart', [UserOneController::class, 'chart'])->name('uochart');
-
 });
 
 Route::group(['prefix' => 'user', 'middleware' => ['usertwo', 'auth:sanctum']], function () {
     Route::get('dashboard', [UserTwoController::class, 'mainboard'])->name('user2dashboard');
     Route::get('chart', [UserTwoController::class, 'chart'])->name('utchart');
     Route::get('table', [UserTwoController::class, 'table'])->name('uttable');
-
+    Route::post('/export-table', [UserTwoController::class, 'export'])->name('exporttable');
+    // Route::get('/export-table', [UserTwoController::class, 'export'])->name('exporttable');
 });
 
 Route::get('pending_approve', [PendingReg::class, 'pendingreg'])->name('pending_approve');
