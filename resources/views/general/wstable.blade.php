@@ -1,8 +1,5 @@
 @extends('layouts.app2')
 <style type="text/css">
-    .wstable th .wstable td {
-        margin: 10px;
-    }
 
     .table-responsive {
 
@@ -13,10 +10,8 @@
 
     .table td,
     .table th {
-
         white-space: nowrap;
         /* Prevent text from wrapping */
-
     }
 </style>
 @section('content')
@@ -36,7 +31,7 @@
                                     <button type="submit" class="btn btn-secondary">Search</button>
                                 </form>
                                 <div class="table-responsive nowarp">
-                                    <table id="wstable" class="display nowrap" style="width:100%">
+                                    <table id="wstable" class="table display nowrap" style="width:100%">
                                         <thead>
                                             <tr>
                                                 <th>#</th>
