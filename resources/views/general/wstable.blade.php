@@ -57,11 +57,22 @@
                     <div class="layout-top-spacing mt-9">
                         <div class="layout-spacing">
                             <div class="widget-content widget-content-area br-6">
-                                <form method="GET" action="{{ route('uttable') }}">
-                                    <input type="text" name="search" value="{{ request('search') }}"
-                                        placeholder="Search by name">
-                                    <button type="submit" class="btn btn-secondary">Search</button>
-                                </form>
+                                <div class="row justify-content-between">
+                                    <div class="col-3">
+                                        <form method="GET" action="{{ route('uttable') }}">
+                                            <input type="text" name="search" value="{{ request('search') }}"
+                                                placeholder="Search by name">
+                                            <button type="submit" class="btn btn-secondary">Search</button>
+                                        </form>
+                                    </div>
+                                    <div class="col-2">
+                                        <form action="{{ route('exporttable') }}" method="POST">
+                                            @csrf
+                                            <button type="submit" class="btn btn-primary">Export Data</button>
+                                        </form>
+                                    </div>
+                                </div>
+
                                 <div class="table-responsive nowarp">
                                     <table id="wstable" class="table display nowrap" style="width:100%">
                                         <thead>
@@ -126,10 +137,6 @@
                                     </table>
                                 </div>
                                 {{ $table->links('vendor.pagination.bootstrap-5') }} <!-- Pagination Links -->
-                                <form action="{{ route('exporttable') }}" method="POST">
-                                    @csrf
-                                    <button type="submit" class="btn btn-primary">Export Data</button>
-                                </form>
                             </div>
                         </div>
                     </div>
