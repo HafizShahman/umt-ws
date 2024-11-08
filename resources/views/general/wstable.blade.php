@@ -1,6 +1,5 @@
 @extends('layouts.app2')
 <style type="text/css">
-
     .table-responsive {
 
         overflow-x: auto;
@@ -12,6 +11,39 @@
     .table th {
         white-space: nowrap;
         /* Prevent text from wrapping */
+    }
+
+    .pagination {
+        margin: 20px 0;
+    }
+
+    .pagination .page-item {
+        margin: 0 5px;
+    }
+
+    .pagination .page-link {
+        color: #007bff;
+        /* Bootstrap primary color */
+        background-color: #fff;
+        border: 1px solid #007bff;
+    }
+
+    .pagination .page-link:hover {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .pagination .active .page-link {
+        background-color: #007bff;
+        color: white;
+        border: 1px solid #007bff;
+    }
+
+    .pagination .disabled .page-link {
+        color: #6c757d;
+        /* Bootstrap secondary color */
+        background-color: #fff;
+        border: 1px solid #dee2e6;
     }
 </style>
 @section('content')
@@ -93,7 +125,7 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                {{ $table->links() }} <!-- Pagination Links -->
+                                {{ $table->links('vendor.pagination.bootstrap-5') }} <!-- Pagination Links -->
                                 <form action="{{ route('exporttable') }}" method="POST">
                                     @csrf
                                     <button type="submit" class="btn btn-primary">Export Data</button>
