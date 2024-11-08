@@ -59,7 +59,7 @@
                     <div class="layout-top-spacing mt-9">
                         <div class="layout-spacing">
                             <div class="widget-content widget-content-area br-6">
-                                <table id="wstable" class="display nowrap" style="width:100%">
+                                <table id="wstable" class="display nowrap mdl-data-table" style="width:100%">
                                     <thead>
                                         <tr>
                                             <th>#</th>
@@ -87,7 +87,38 @@
                                             <th>Rainfall</th>
                                         </tr>
                                     </thead>
-                                    
+                                    <tbody>
+                                        @php
+                                            $num = 1;
+                                        @endphp
+                                        @foreach ($table as $row)
+                                            <tr>
+                                                <td>{{ $num++ }}</td>
+                                                <td>{{ $row->id }}</td>
+                                                <td>{{ Carbon\Carbon::parse($row->timestamp)->format('d-M-Y h-i-s a') }}
+                                                <td>{{ $row->latitude }}</td>
+                                                <td>{{ $row->longitude }}</td>
+                                                {{-- <td>{{ $row->hour_rainfall }}</td> --}}
+                                                <td>{{ $row->baro_press }}</td>
+                                                <td>{{ $row->rel_hum }}</td>
+                                                <td>{{ $row->sol_rad }}</td>
+                                                <td>{{ $row->L_Voltage }}</td>
+                                                <td>{{ $row->B_Voltage }}</td>
+                                                <td>{{ $row->turbidity }}</td>
+                                                <td>{{ $row->WATER_lvl }}</td>
+                                                <td>{{ $row->w_temp }}</td>
+                                                <td>{{ $row->wind_direction }}</td>
+                                                <td>{{ $row->wind_speed }}</td>
+                                                <td>{{ $row->chlorophyll }}</td>
+                                                <td>{{ $row->conductivity }}</td>
+                                                <td>{{ $row->DO }}</td>
+                                                <td>{{ $row->DO_sat }}</td>
+                                                <td>{{ $row->ph }}</td>
+                                                <td>{{ $row->air_temp }}</td>
+                                                <td>{{ $row->rain }}</td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
                                 </table>
                             </div>
                         </div>
@@ -100,47 +131,4 @@
     </div>
     <!--  END CONTENT AREA  -->
     @include('general.inc.js')
-    <script>
-        $(document).ready(function() {
-            $('#wstable').DataTable({
-                processing: true,
-                serverSide: true,
-                ajax: '{{ route("uttable") }}', // Adjust this to your route
-                columns: [
-                    { data: null, render: function(data, type, row, meta) {
-                        return meta.row + meta.settings._iDisplayStart + 1; // Row counter
-                    }},
-                    { data: 'id', name: 'id' },
-                    { data: 'timestamp', name: 'timestamp', render: function(data) {
-                        return moment(data).format('DD-MMM-YYYY hh:mm:ss a'); // Format timestamp
-                    }},
-                    { data: 'latitude', name: 'latitude' },
-                    { data: 'longitude', name: 'longitude' },
-                    { data: 'baro_press', name: 'baro_press' },
-                    { data: 'rel_hum', name: 'rel_hum' },
-                    { data: 'sol_rad', name: 'sol_rad' },
-                    { data: 'L_Voltage', name: 'L_Voltage' },
-                    { data: 'B_Voltage', name: 'B_Voltage' },
-                    { data: 'turbidity', name: 'turbidity' },
-                    { data: 'WATER_lvl', name: 'WATER_lvl' },
-                    { data: 'w_temp', name: 'w_temp' },
-                    { data: 'wind_direction', name: 'wind_direction' },
-                    { data: 'wind_speed', name: 'wind_speed' },
-                    { data: 'chlorophyll', name: 'chlor ophyll' },
-                    { data: 'conductivity', name: 'conductivity' },
-                    { data: 'DO', name: 'DO' },
-                    { data: 'DO_sat', name: 'DO_sat' },
-                    { data: 'ph', name: 'ph' },
-                    { data: 'air_temp', name: 'air_temp' },
-                    { data: 'rain', name: 'rain' },
-                ],
-                dom: 'Bfrtip',
-                buttons: [
-                    'copy', 'csv', 'excel', 'pdf', 'print'
-                ],
-                scrollX: true
-            });
-        });
-    </script>
 @endsection
-
