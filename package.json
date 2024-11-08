@@ -22,8 +22,8 @@
     },
     "dependencies": {
         "@sweetalert2/theme-bootstrap-4": "^5.0.10",
-        "datatables.net": "^1.11.5",
-        "datatables.net-dt": "^1.11.5",
+        "datatables.net": "^1.13.11",
+        "datatables.net-dt": "^1.13.11",
         "sweetalert2": "^11.4.4"
     }
 }

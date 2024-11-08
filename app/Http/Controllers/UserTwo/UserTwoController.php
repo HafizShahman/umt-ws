@@ -17,10 +17,17 @@ class UserTwoController extends Controller
     {
         return view('general.chart');
     }
-    public function table()
+    public function table(Request $request)
     {
-        $table = DB::table('wskenyir_table')->get();
+        
         // dd($table);
-        return view('general.wstable',compact('table'));
+        if ($request->ajax()) {
+
+            $table = WskenyirTable::all();
+
+            return datatables()->of($table)->make(true);
+
+        }
+        return view('general.wstable');
     }
 }
