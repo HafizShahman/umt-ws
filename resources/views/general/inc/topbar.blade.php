@@ -41,7 +41,7 @@
                     <a href="{{ route('superadminchart') }}">
                 @endif
                 @if (Auth::user()->role_id == 2)
-                    <a href="{{ route('umtadminchart') }}">
+                    <a href="{{ route('umtchart') }}">
                 @endif
                 @if (Auth::user()->role_id == 3)
                     <a href="{{ route('uochart') }}">
