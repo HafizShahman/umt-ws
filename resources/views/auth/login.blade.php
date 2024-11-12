@@ -15,7 +15,7 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            background-image: URL({{ asset('assets/assets/auth/weatherstation.png') }});
+            background-image: URL({{ asset('assets/assets/auth/wsblur.png') }});
 
         }
 
