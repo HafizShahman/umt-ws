@@ -24,11 +24,11 @@ class RedirectIfAuthenticated
             if (Auth::guard($guard)->check() && Auth::user()->role_id == 1) {
                 $upd['last_login_at'] = Carbon::now();
                 DB::table('users')->where('id', Auth::user()->id)->update($upd);
-                return redirect()->route('superadminmainboard');
+                return redirect()->route('superadmindashboard');
             } elseif (Auth::guard($guard)->check() && Auth::user()->role_id == 2) {
                 $upd['last_login_at'] = Carbon::now();
                 DB::table('users')->where('id', Auth::user()->id)->update($upd);
-                return redirect()->route('umtadminuser_list');
+                return redirect()->route('umtdashboard');
             } elseif (Auth::guard($guard)->check() && Auth::user()->role_id == 3) {
                 $upd['last_login_at'] = Carbon::now();
                 DB::table('users')->where('id', Auth::user()->id)->update($upd);

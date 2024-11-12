@@ -23,29 +23,35 @@ Route::get('/', function () {
 
 
 Route::group(['prefix' => 'superadmin', 'middleware' => ['superadmin', 'auth:sanctum', 'verified']], function () {
-    Route::get('dashboard', [AdminController::class, 'index'])->name('superadmindashboard');
-    Route::get('user_list', [AdminController::class, 'user_list'])->name('superadminuser_list');
-    Route::get('mainboard', [GeneralController::class, 'mainboard'])->name('superadminmainboard');
+    Route::get('dashboard', [GeneralController::class, 'mainboard'])->name('superadmindashboard');
+    Route::get('chart', [GeneralController::class, 'chart'])->name('superadminchart');
+    Route::get('table', [GeneralController::class, 'table'])->name('superadmintable');
 
+    Route::get('user_list', [AdminController::class, 'user_list'])->name('superadminuser_list');
     Route::post('assign', [AdminController::class, 'adminassignrole'])->name('adminassignrole');
     Route::post('delete', [AdminController::class, 'deleteuser'])->name('deleteuser');
 });
 Route::group(['prefix' => 'umtadmin', 'middleware' => ['umtadmin', 'auth:sanctum', 'verified']], function () {
+    Route::get('dashboard', [GeneralController::class, 'mainboard'])->name('umtdashboard');
+    Route::get('chart', [GeneralController::class, 'chart'])->name('umtchart');
+    Route::get('table', [GeneralController::class, 'table'])->name('umttable');
+
     Route::get('user_list', [UmtAdminController::class, 'user_list'])->name('umtadminuser_list');
-
     Route::post('assign', [UmtAdminController::class, 'assignrole'])->name('assignrole');
+    Route::post('delete', [AdminController::class, 'deleteuser'])->name('deleteuser');
+
 });
 
-Route::group(['prefix' => 'user', 'middleware' => ['userone', 'auth:sanctum']], function () {
-    Route::get('dashboard', [UserController::class, 'mainboard'])->name('user1dashboard');
-    Route::get('chart', [UserController::class, 'chart'])->name('uochart');
+Route::group(['prefix' => 'u1', 'middleware' => ['userone', 'auth:sanctum']], function () {
+    Route::get('dashboard', [GeneralController::class, 'mainboard'])->name('user1dashboard');
+    Route::get('chart', [GeneralController::class, 'chart'])->name('uochart');
 });
 
-Route::group(['prefix' => 'user', 'middleware' => ['usertwo', 'auth:sanctum']], function () {
-    Route::get('dashboard', [UserController::class, 'mainboard'])->name('user2dashboard');
-    Route::get('chart', [UserController::class, 'chart'])->name('utchart');
-    Route::get('table', [UserController::class, 'table'])->name('uttable');
-    Route::post('/export-table', [UserController::class, 'export'])->name('exporttable');
+Route::group(['prefix' => 'u2', 'middleware' => ['usertwo', 'auth:sanctum']], function () {
+    Route::get('dashboard', [GeneralController::class, 'mainboard'])->name('user2dashboard');
+    Route::get('chart', [GeneralController::class, 'chart'])->name('utchart');
+    Route::get('table', [GeneralController::class, 'table'])->name('uttable');
+    // Route::post('/export-table', [GeneralController::class, 'export'])->name('exporttable');
 });
 
 Route::get('pending_approve', [PendingReg::class, 'pendingreg'])->name('pending_approve');

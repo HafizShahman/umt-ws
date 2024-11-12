@@ -9,6 +9,19 @@ use Illuminate\Support\Facades\Redirect;
 
 class UmtAdminController extends Controller
 {
+    public function mainboard()
+    {
+        return view('general.mainboard');
+    }
+    public function chart()
+    {
+        return view('general.chart');
+    }
+    public function table()
+    {
+        return view('general.table');
+    }
+    
     public function user_list()
     {
         $usertable = DB::table('users')

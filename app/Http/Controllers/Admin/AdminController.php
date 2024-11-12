@@ -8,11 +8,6 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
-    public function index()
-    {
-        return view('admin.dashboard');
-    }
-
     public function user_list()
     {
         $usertable = DB::table('users')

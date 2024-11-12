@@ -12,13 +12,12 @@
 
         <ul class="list-unstyled menu-categories" id="topAccordion">
 
-            <li
-                class="menu single-menu  {{ Request::routeIs('userdashboard' || 'superadminmainboard') ? 'active' : '' }}">
+            <li class="menu single-menu">
                 @if (Auth::user()->role_id == 1)
-                    <a href="{{ route('superadminmainboard') }}">
+                    <a href="{{ route('superadmindashboard') }}">
                 @endif
                 @if (Auth::user()->role_id == 2)
-                    <a href="{{ route('umtadminuser_list') }}">
+                    <a href="{{ route('umtdashboard') }}">
                 @endif
                 @if (Auth::user()->role_id == 3)
                     <a href="{{ route('user1dashboard') }}">
@@ -37,34 +36,38 @@
                 </div>
                 </a>
             </li>
-            @if (Auth::user()->role_id == 3 || Auth::user()->role_id == 4)
-                <li class="menu single-menu">
-                    @if (Auth::user()->role_id == 3)
-                        <a href="{{ route('uochart') }}">
-                    @endif
-                    @if (Auth::user()->role_id == 4)
-                        <a href="{{ route('utchart') }}">
-                    @endif
-                    <div class="">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="feather feather-bar-chart">
-                            <line x1="12" y1="20" x2="12" y2="10"></line>
-                            <line x1="18" y1="20" x2="18" y2="4"></line>
-                            <line x1="6" y1="20" x2="6" y2="16"></line>
-                        </svg>
-                        <span>Chart</span>
-                    </div>
-                    </a>
-                </li>
-            @endif
+            <li class="menu single-menu">
+                @if (Auth::user()->role_id == 1)
+                    <a href="{{ route('superadminchart') }}">
+                @endif
+                @if (Auth::user()->role_id == 2)
+                    <a href="{{ route('umtadminchart') }}">
+                @endif
+                @if (Auth::user()->role_id == 3)
+                    <a href="{{ route('uochart') }}">
+                @endif
+                @if (Auth::user()->role_id == 4)
+                    <a href="{{ route('utchart') }}">
+                @endif
+                <div class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-bar-chart">
+                        <line x1="12" y1="20" x2="12" y2="10"></line>
+                        <line x1="18" y1="20" x2="18" y2="4"></line>
+                        <line x1="6" y1="20" x2="6" y2="16"></line>
+                    </svg>
+                    <span>Chart</span>
+                </div>
+                </a>
+            </li>
             @if (Auth::user()->role_id == 1 || Auth::user()->role_id == 2 || Auth::user()->role_id == 4)
                 <li class="menu single-menu">
                     @if (Auth::user()->role_id == 1)
-                        <a href="{{ route('superadminmainboard') }}">
+                        <a href="{{ route('superadmintable') }}">
                     @endif
                     @if (Auth::user()->role_id == 2)
-                        <a href="{{ route('umtadminuser_list') }}">
+                        <a href="{{ route('umttable') }}">
                     @endif
                     @if (Auth::user()->role_id == 4)
                         <a href="{{ route('uttable') }}">

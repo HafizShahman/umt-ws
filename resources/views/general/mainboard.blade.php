@@ -7,7 +7,7 @@
     <!--  BEGIN CONTENT AREA  -->
     <div id="content" class="main-content">
         <iframe height="1080px" width="100%" class="positon-absolute"
-            src="http://wsumtkenyir.net:8080/dashboard/04a69090-8ebe-11ef-bec9-c7a144088036?publicId=cef145a0-8ff6-11ef-bec9-c7a144088036"
+            src="http://wsumtkenyir.net:8080/dashboard/d280c820-9da3-11ef-ae08-d3a4a66f3550?publicId=cef145a0-8ff6-11ef-bec9-c7a144088036"
             frameborder="0" allowfullscreen>
         </iframe>
         @include('general.inc.footer')
