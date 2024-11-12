@@ -86,6 +86,13 @@
                                                         <button type="submit" class="btn">Assign as User 2</button>
                                                     </form>
                                                 </div>
+                                                <div class="dropdown-item">
+                                                    <form action="{{ route('deleteuser') }}" method="post">
+                                                        @csrf
+                                                        <input type="hidden" name="userid" value="{{ $row->id }}">
+                                                        <button type="submit" class="btn">Delete User</button>
+                                                    </form>
+                                                </div>
                                             </div>
                                         </td>
                                     </tr>

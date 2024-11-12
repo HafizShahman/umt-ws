@@ -32,4 +32,10 @@ class AdminController extends Controller
 
         return Redirect()->route('superadminuser_list');
     }
+    
+    public function deleteuser(Request $request){
+        DB::table('users')->where('id', $request->userid)->delete();
+        return Redirect()->route('superadminuser_list');
+
+    }
 }

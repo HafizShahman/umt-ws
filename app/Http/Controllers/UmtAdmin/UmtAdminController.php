@@ -20,12 +20,18 @@ class UmtAdminController extends Controller
         return view('umtadmin.dashboard', compact('usertable'));
     }
 
-    public function assignrole(Request $request)
+    public function adminassignrole(Request $request)
     {
 
         $upd['role_id'] = $request->roleid;
         DB::table('users')->where('id', $request->userid)->update($upd);
 
-        return Redirect()->route('umtadmindashboard');
+        return Redirect()->route('umtadminuser_list');
+    }
+    
+    public function deleteuser(Request $request){
+        DB::table('users')->where('id', $request->userid)->delete();
+        return Redirect()->route('umtadminuser_list');
+
     }
 }

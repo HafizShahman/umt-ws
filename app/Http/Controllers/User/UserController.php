@@ -1,15 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\UserTwo;
+namespace App\Http\Controllers\User;
 
 use App\Exports\ExportTableData;
 use App\Http\Controllers\Controller;
 use App\Models\WskenyirTable;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Maatwebsite\Excel\Facades\Excel;
 
-class UserTwoController extends Controller
+class UserController extends Controller
 {
     public function mainboard()
     {
@@ -24,7 +23,7 @@ class UserTwoController extends Controller
         $query = $request->input('search');
         $table = WskenyirTable::paginate(20);
 
-        return view('general.wstable', compact('table', 'query'));
+        return view('general.table', compact('table', 'query'));
     }
     public function export()
     {

@@ -12,8 +12,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\General\GeneralController;
 use App\Http\Controllers\UmtAdmin\UmtAdminController;
-use App\Http\Controllers\UserOne\UserOneController;
-use App\Http\Controllers\UserTwo\UserTwoController;
+use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Redirect;
 
 
@@ -29,6 +28,7 @@ Route::group(['prefix' => 'superadmin', 'middleware' => ['superadmin', 'auth:san
     Route::get('mainboard', [GeneralController::class, 'mainboard'])->name('superadminmainboard');
 
     Route::post('assign', [AdminController::class, 'adminassignrole'])->name('adminassignrole');
+    Route::post('delete', [AdminController::class, 'deleteuser'])->name('deleteuser');
 });
 Route::group(['prefix' => 'umtadmin', 'middleware' => ['umtadmin', 'auth:sanctum', 'verified']], function () {
     Route::get('user_list', [UmtAdminController::class, 'user_list'])->name('umtadminuser_list');
@@ -36,17 +36,16 @@ Route::group(['prefix' => 'umtadmin', 'middleware' => ['umtadmin', 'auth:sanctum
     Route::post('assign', [UmtAdminController::class, 'assignrole'])->name('assignrole');
 });
 
-Route::group(['prefix' => 'staff', 'middleware' => ['userone', 'auth:sanctum']], function () {
-    Route::get('dashboard', [UserOneController::class, 'mainboard'])->name('user1dashboard');
-    Route::get('chart', [UserOneController::class, 'chart'])->name('uochart');
+Route::group(['prefix' => 'user', 'middleware' => ['userone', 'auth:sanctum']], function () {
+    Route::get('dashboard', [UserController::class, 'mainboard'])->name('user1dashboard');
+    Route::get('chart', [UserController::class, 'chart'])->name('uochart');
 });
 
 Route::group(['prefix' => 'user', 'middleware' => ['usertwo', 'auth:sanctum']], function () {
-    Route::get('dashboard', [UserTwoController::class, 'mainboard'])->name('user2dashboard');
-    Route::get('chart', [UserTwoController::class, 'chart'])->name('utchart');
-    Route::get('table', [UserTwoController::class, 'table'])->name('uttable');
-    Route::post('/export-table', [UserTwoController::class, 'export'])->name('exporttable');
-    // Route::get('/export-table', [UserTwoController::class, 'export'])->name('exporttable');
+    Route::get('dashboard', [UserController::class, 'mainboard'])->name('user2dashboard');
+    Route::get('chart', [UserController::class, 'chart'])->name('utchart');
+    Route::get('table', [UserController::class, 'table'])->name('uttable');
+    Route::post('/export-table', [UserController::class, 'export'])->name('exporttable');
 });
 
 Route::get('pending_approve', [PendingReg::class, 'pendingreg'])->name('pending_approve');
