@@ -6,11 +6,10 @@
 @section('content')
     <!--  BEGIN CONTENT AREA  -->
     <div id="content" class="main-content">
-        <iframe height="1080px" width="100%" class="positon-absolute"
+        <iframe class="position-absolute w-100"
             src="http://wsumtkenyir.net:8080/dashboard/d280c820-9da3-11ef-ae08-d3a4a66f3550?publicId=cef145a0-8ff6-11ef-bec9-c7a144088036"
-            frameborder="0" allowfullscreen>
+            frameborder="0" style="position: absolute; top: 0; left: 0;right: 0; overflow: hidden; height:1600px;">
         </iframe>
-        @include('general.inc.footer')
     </div>
     <!--  END CONTENT AREA  -->
 @endsection

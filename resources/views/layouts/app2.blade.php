@@ -18,15 +18,11 @@
     @include('general.inc.nav')
     <!--  END NAVBAR  -->
 
+    <!--  BEGIN TOPBAR  -->
+    @include('general.inc.topbar')
+    <!--  END TOPBAR  -->
     <!--  BEGIN MAIN CONTAINER  -->
-    <div class="main-container" id="container">
-
-        <div class="overlay"></div>
-        <div class="search-overlay"></div>
-
-        <!--  BEGIN TOPBAR  -->
-        @include('general.inc.topbar')
-        <!--  END TOPBAR  -->
+    <div class="main-container position-relative" id="container">
 
         <!--  BEGIN CONTENT AREA  -->
         <div id="content" class="main-content">
@@ -40,9 +36,6 @@
     </div>
     <!-- END MAIN CONTAINER -->
     @include('general.inc.js')
-    @if (Route::is('dashboard'))
-        @include('general.js.dash_js')
-    @endif
 </body>
 
 </html>
