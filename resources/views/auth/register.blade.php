@@ -82,6 +82,7 @@
         }
 
         input[type="text"],
+        input[type="email"],
         input[type="password"],
         select {
             padding: 15px 20px;
@@ -113,7 +114,7 @@
 <body class="form">
 
     <div class="card">
-        <form method="POST" action="{{ route('register') }}">
+        <form method="POST" action="{{ route('registeruser') }}">
             @csrf
             <center>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Logo_Rasmi_UMT.png/1200px-Logo_Rasmi_UMT.png"
@@ -126,9 +127,9 @@
 
             <div class="email-login">
                 <label for="name"> <b>Name</b></label>
-                <input type="text" placeholder="Enter Email" name="name" required>
+                <input type="text" placeholder="Enter Name" name="name" required>
                 <label for="email"> <b>Email</b></label>
-                <input type="text" placeholder="Enter Email" name="email" required>
+                <input type="email" placeholder="Enter Email" name="email" required>
                 <label for="password"><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" name="password" required>
                 <label for="confirmed"><b>Confirm Password</b></label>
