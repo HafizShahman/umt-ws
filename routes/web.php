@@ -29,7 +29,7 @@ Route::group(['prefix' => 'superadmin', 'middleware' => ['superadmin', 'auth:san
 
     Route::get('user_list', [AdminController::class, 'user_list'])->name('superadminuser_list');
     Route::post('assign', [AdminController::class, 'adminassignrole'])->name('adminassignrole');
-    Route::post('delete', [AdminController::class, 'deleteuser'])->name('deleteuser');
+    Route::post('delete', [AdminController::class, 'deleteuser'])->name('admindeleteuser');
 });
 Route::group(['prefix' => 'umtadmin', 'middleware' => ['umtadmin', 'auth:sanctum', 'verified']], function () {
     Route::get('dashboard', [GeneralController::class, 'mainboard'])->name('umtdashboard');
@@ -38,7 +38,7 @@ Route::group(['prefix' => 'umtadmin', 'middleware' => ['umtadmin', 'auth:sanctum
 
     Route::get('user_list', [UmtAdminController::class, 'user_list'])->name('umtadminuser_list');
     Route::post('assign', [UmtAdminController::class, 'assignrole'])->name('assignrole');
-    Route::post('delete', [UmtAdminController::class, 'deleteuser'])->name('deleteuser');
+    Route::post('delete', [UmtAdminController::class, 'deleteuser'])->name('umtdeleteuser');
 
 });
 

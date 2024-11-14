@@ -87,10 +87,15 @@
                                                     </form>
                                                 </div>
                                                 <div class="dropdown-item">
-                                                    <form action="{{ route('deleteuser') }}" method="post">
-                                                        @csrf
-                                                        <input type="hidden" name="userid" value="{{ $row->id }}">
-                                                        <button type="submit" class="btn">Delete User</button>
+                                                    @if (Auth::user()->role_id == 1)
+                                                        <form action="{{ route('admindeleteuser') }}" method="post">
+                                                    @endif
+                                                    @if (Auth::user()->role_id == 2)
+                                                        <form action="{{ route('umtdeleteuser') }}" method="post">
+                                                    @endif
+                                                    @csrf
+                                                    <input type="hidden" name="userid" value="{{ $row->id }}">
+                                                    <button type="submit" class="btn">Delete User</button>
                                                     </form>
                                                 </div>
                                             </div>
