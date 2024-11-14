@@ -21,7 +21,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="widget-content widget-content-area br-6">
+                    <div class="widget-content widget-content-area br-6" style="overflow-x: auto;">
                         <table id="html5-extension" class="table table-hover non-hover" style="width:100%">
                             <thead>
                                 <tr>

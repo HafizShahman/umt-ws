@@ -38,7 +38,7 @@ Route::group(['prefix' => 'umtadmin', 'middleware' => ['umtadmin', 'auth:sanctum
 
     Route::get('user_list', [UmtAdminController::class, 'user_list'])->name('umtadminuser_list');
     Route::post('assign', [UmtAdminController::class, 'assignrole'])->name('assignrole');
-    Route::post('delete', [AdminController::class, 'deleteuser'])->name('deleteuser');
+    Route::post('delete', [UmtAdminController::class, 'deleteuser'])->name('deleteuser');
 
 });
 

@@ -30,7 +30,7 @@ class UmtAdminController extends Controller
             ->get();
 
 
-        return view('umtadmin.dashboard', compact('usertable'));
+        return view('admin.userlist', compact('usertable'));
     }
 
     public function adminassignrole(Request $request)
