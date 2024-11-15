@@ -136,7 +136,7 @@
                 <label for="confirmed"><b>Confirm Password</b></label>
                 <input type="password" placeholder="Enter Confirm Password" name="confirmed" required>
                 <label for="user_type"><b>User Type</b></label>
-                <select name="user_type" id="user_type">
+                <select name="user_type" id="user_type" required>
                     <option value="" disabled selected>Select User Type</option>
                     <option value="Student">Student</option>
                     <option value="Researcher">Researcher</option>
