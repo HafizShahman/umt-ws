@@ -33,7 +33,7 @@
 
         .card {
             font-family: sans-serif;
-            width: 300px;
+            width: 400px;
             margin-left: auto;
             margin-right: 30%;
             margin-top: 5em;
@@ -116,9 +116,10 @@
             @csrf
             <center>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Logo_Rasmi_UMT.png/1200px-Logo_Rasmi_UMT.png"
-                    alt="logo"height="auto" width="30%">
+                    alt="logo"height="auto" width="25%">
             </center>
-            <h2 class="title">UMT Stesen Penyelidikan Alami Kenyir</h2>
+            <h3 class="title">Stesen Penyelidikan Alami Kenyir (SPAK)</h3>
+            <h3 class="title">Universiti Malaysia Terengganu</h3>
             <p class="subtitle">Don't have an account? <a href="{{ URL::to('register') }}"> Sign Up</a></p>
 
             <p class="or"><span>or</span></p>
